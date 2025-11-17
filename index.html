@@ -4,8 +4,171 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="lobby.css">
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-	HELLO WORLD
+	<div id="site_wrap">
+		<header>
+			<div id="header_top">
+				<div id="logo_header">
+					
+				</div>
+				<nav>
+					<ul>
+						<li><a href="">
+							<svg class="icon" viewBox="0 0 1920 1920">
+							    <path d="M847.059 113c256.15 0 495.247 113.845 656.075 312.282l-87.868 71.153c-139.257-171.896-346.278-270.494-568.207-270.494-404.781 0-734.118 329.337-734.118 734.118 0 404.781 329.337 734.117 734.118 734.117 221.93 0 428.95-98.597 568.207-270.494l87.868 71.153c-160.828 198.438-399.925 312.283-656.075 312.283C379.934 1807.118 0 1427.184 0 960.058 0 492.935 379.934 113 847.059 113Zm129.476 411.817 79.849 79.963-298.955 298.842h1162.616v112.828H757.43l298.955 298.956-79.85 79.85-435.162-435.163 435.163-435.276Z" fill-rule="evenodd"/>
+							</svg>
+							START
+						</a></li>
+						<li><a href="">
+							<svg class="icon" viewBox="-4.5 0 32 32">
+								<path d="M19.469 12.594l3.625 3.313c0.438 0.406 0.313 0.719-0.281 0.719h-2.719v8.656c0 0.594-0.5 1.125-1.094 1.125h-4.719v-6.063c0-0.594-0.531-1.125-1.125-1.125h-2.969c-0.594 0-1.125 0.531-1.125 1.125v6.063h-4.719c-0.594 0-1.125-0.531-1.125-1.125v-8.656h-2.688c-0.594 0-0.719-0.313-0.281-0.719l10.594-9.625c0.438-0.406 1.188-0.406 1.656 0l2.406 2.156v-1.719c0-0.594 0.531-1.125 1.125-1.125h2.344c0.594 0 1.094 0.531 1.094 1.125v5.875z"></path>
+							</svg>
+							LOBBY
+						</a></li>
+						<li><a href="">
+							<svg class="icon" id="ic_abt" viewBox="0 0 24 24">
+								<circle cx="12" cy="12" r="10" stroke-width="1.5"/>
+								<path d="M12 17V11" stroke-width="1.5" stroke-linecap="round"/>
+								<circle class="ic_abt_1" cx="1" cy="1" r="1" transform="matrix(1 0 0 -1 11 9)" fill="#1C274C"/>
+							</svg>
+							ABOUT
+						</a></li>
+						<li><a href="">
+							<svg class="icon" viewBox="0 0 24 24">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M22 13.6477V8.976C22 7.72287 21.9342 6.64762 21.7345 5.74915C21.5323 4.83933 21.1798 4.05065 20.5646 3.43543C19.9494 2.82021 19.1607 2.46772 18.2508 2.26552C17.3524 2.06584 16.2771 2 15.024 2H8.976C7.72287 2 6.64762 2.06584 5.74915 2.26552C4.83933 2.46772 4.05065 2.82021 3.43543 3.43543C2.82021 4.05065 2.46772 4.83933 2.26552 5.74915C2.06584 6.64762 2 7.72287 2 8.976V15.024C2 16.2771 2.06584 17.3524 2.26552 18.2508C2.46772 19.1607 2.82021 19.9494 3.43543 20.5646C4.05065 21.1798 4.83933 21.5323 5.74915 21.7345C6.64762 21.9342 7.72287 22 8.976 22H15.024C16.2771 22 17.3524 21.9342 18.2508 21.7345C19.1607 21.5323 19.9494 21.1798 20.5646 20.5646C21.1798 19.9494 21.5323 19.1607 21.7345 18.2508C21.9342 17.3524 22 16.2771 22 15.024V13.6942C22.0004 13.6787 22.0004 13.6632 22 13.6477ZM4.21788 6.18305C4.066 6.86645 4 7.76851 4 8.976V11.096C4.71987 10.4038 5.39001 9.83748 6.03895 9.42453C6.82527 8.92417 7.6322 8.61574 8.50225 8.61574C9.3723 8.61574 10.1792 8.92417 10.9656 9.42453C11.7421 9.91865 12.5489 10.6324 13.435 11.5185L15.0603 13.1438C16.0436 12.3332 17.0078 11.7735 18.0456 11.6442C18.7292 11.559 19.3739 11.6673 20 11.9198V8.976C20 7.76851 19.934 6.86645 19.7821 6.18305C19.6328 5.51101 19.414 5.11327 19.1504 4.84964C18.8867 4.58602 18.489 4.36724 17.8169 4.21788C17.1336 4.066 16.2315 4 15.024 4H8.976C7.76851 4 6.86645 4.066 6.18305 4.21788C5.51101 4.36724 5.11327 4.58602 4.84964 4.84964C4.58602 5.11327 4.36724 5.51101 4.21788 6.18305Z"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M14 8C14 6.89543 14.8954 6 16 6C17.1046 6 18 6.89543 18 8C18 9.10457 17.1046 10 16 10C14.8954 10 14 9.10457 14 8Z"/>
+							</svg>
+							VISUAL
+						</a></li>
+						<li><a href="">
+							<svg class="icon" viewBox="0 0 24 24">
+							    <path d="M12 6.90909C10.8999 5.50893 9.20406 4.10877 5.00119 4.00602C4.72513 3.99928 4.5 4.22351 4.5 4.49965C4.5 6.54813 4.5 14.3034 4.5 16.597C4.5 16.8731 4.72515 17.09 5.00114 17.099C9.20405 17.2364 10.8999 19.0998 12 20.5M12 6.90909C13.1001 5.50893 14.7959 4.10877 18.9988 4.00602C19.2749 3.99928 19.5 4.21847 19.5 4.49461C19.5 6.78447 19.5 14.3064 19.5 16.5963C19.5 16.8724 19.2749 17.09 18.9989 17.099C14.796 17.2364 13.1001 19.0998 12 20.5M12 6.90909L12 20.5" stroke-linejoin="round"/>
+								<path d="M19.2353 6H21.5C21.7761 6 22 6.22386 22 6.5V19.539C22 19.9436 21.5233 20.2124 21.1535 20.0481C20.3584 19.6948 19.0315 19.2632 17.2941 19.2632C14.3529 19.2632 12 21 12 21C12 21 9.64706 19.2632 6.70588 19.2632C4.96845 19.2632 3.64156 19.6948 2.84647 20.0481C2.47668 20.2124 2 19.9436 2 19.539V6.5C2 6.22386 2.22386 6 2.5 6H4.76471" stroke-linejoin="round"/>
+							</svg>
+							LITERARY
+						</a></li>
+						<li><a href="">
+							<svg class="icon" viewBox="0 0 24 24">
+								<path id="vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M6.75 6.5C6.75 3.6005 9.1005 1.25 12 1.25C14.8995 1.25 17.25 3.6005 17.25 6.5C17.25 9.3995 14.8995 11.75 12 11.75C9.1005 11.75 6.75 9.3995 6.75 6.5Z"/>
+								<path id="rec (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M4.25 18.5714C4.25 15.6325 6.63249 13.25 9.57143 13.25H14.4286C17.3675 13.25 19.75 15.6325 19.75 18.5714C19.75 20.8792 17.8792 22.75 15.5714 22.75H8.42857C6.12081 22.75 4.25 20.8792 4.25 18.5714Z"/>
+							</svg>
+							TEAM
+						</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="pattern_container">
+				<div class="pattern_outer">
+					<div class="pattern_inner">
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div id="title">
+				<h1>REVIVERE</h1>
+			</div>
+			<div id="content">
+				<div id="label">
+					<h1>
+						<span>LOBBY</span>
+						<small>-gallery of the ancients</small>
+					</h1>
+				</div>
+				<div id="columns">
+					<div id="A">
+						<div class="thumbnail">
+							<div class="block_header thumbnail_header">
+								<span class="block_square thumb_square"></span>
+							</div>
+							<div class="block_content">
+								<div class="thumbnail_img">
+									
+								</div>
+								<hr>
+								<span>DISTANT PAST circa 2025</span>
+							</div>
+						</div>
+						<div id="button_container">
+							<button class="nier_button"><span class="header_square"></span>Visual Page</button>
+							<button class="nier_button"><span class="header_square"></span>Literary Page</button>
+						</div>
+					</div>
+					<div class="slideshow">
+						<div class="block_header">
+							<span class="header_square"></span>
+							Slideshow
+						</div>
+						<div class="block_content">
+							<div class="carousel">
+								<ul>
+									<li><img src="./assets/slideshow/1.JPG" alt="1"></li>
+									<li><img src="./assets/slideshow/2.JPG" alt="2"></li>
+									<li data-active><img src="./assets/slideshow/3.JPG" alt="3"></li>
+									<li><img src="./assets/slideshow/4.JPG" alt="4"></li>
+									<li><img src="./assets/slideshow/5.JPG" alt="5"></li>
+									<li><img src="./assets/slideshow/6.JPG" alt="6"></li>
+									<li><img src="./assets/slideshow/7.JPG" alt="7"></li>
+									<li><img src="./assets/slideshow/8.JPG" alt="8"></li>
+									<li><img src="./assets/slideshow/9.JPG" alt="9"></li>
+									<li><img src="./assets/slideshow/10.JPG" alt="10"></li>
+									<li><img src="./assets/slideshow/11.JPG" alt="11"></li>
+									<li><img src="./assets/slideshow/12.JPG" alt="12"></li>
+									<li><img src="./assets/slideshow/13.JPG" alt="13"></li>
+									<li><img src="./assets/slideshow/14.JPG" alt="14"></li>
+									<li><img src="./assets/slideshow/15.JPG" alt="15"></li>
+									<li><img src="./assets/slideshow/16.JPG" alt="16"></li>
+									<li><img src="./assets/slideshow/17.JPG" alt="17"></li>
+									<li><img src="./assets/slideshow/18.JPG" alt="18"></li>
+									<li><img src="./assets/slideshow/19.JPG" alt="19"></li>
+									<li><img src="./assets/slideshow/20.JPG" alt="20"></li>
+									<li><img src="./assets/slideshow/21.JPG" alt="21"></li>
+									<li><img src="./assets/slideshow/22.JPG" alt="22"></li>
+									<li><img src="./assets/slideshow/23.JPG" alt="23"></li>
+									<li><img src="./assets/slideshow/24.JPG" alt="24"></li>
+									<li><img src="./assets/slideshow/25.JPG" alt="25"></li>
+									<li><img src="./assets/slideshow/26.JPG" alt="26"></li>
+									<li><img src="./assets/slideshow/27.JPG" alt="27"></li>
+									<li><img src="./assets/slideshow/28.JPG" alt="28"></li>
+									<li><img src="./assets/slideshow/29.JPG" alt="29"></li>
+								</ul>
+							</div>
+
+							<hr id="hr_a">
+							<hr id="hr_b">
+						</div>
+					</div>
+				</div>
+				<div id="control_bar">
+					<div id="bar">
+						<div id="bar_text">
+							<h2>maybe music or more quotes</h2>
+						</div>
+						<div id="controls">
+							<ul>
+								<li><button class="slideshow_arrow" id="slideshow_previous"></button><label for="slideshow_previous">Slideshow Previous</label></li>
+								<li><button class="slideshow_arrow" id="slideshow_next"></button><label for="slideshow_next">Slideshow Next</label></li>
+								<li><input type="checkbox" id="music_toggle"><label for="music_toggle"><span id="music_toggle_icon"></span>Toggle Music</label></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="pattern_container">
+				<div class="pattern_outer">
+					<div class="pattern_inner">
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<audio id="background_music"></audio>
+	<script src="./lobby.js"></script>
 </body>
 </html>

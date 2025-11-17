@@ -13,7 +13,7 @@ console.log(musicToggle);
 
 function playNext()
 {
-	backgroundMusic.src = "./assets/audio/" + playlist[index].toLowerCase().replace(" ", "_") + ".mp3";
+	backgroundMusic.src = "./assets/background_music/" + playlist[index].toLowerCase().replace(" ", "_") + ".mp3";
 	console.log(backgroundMusic.src);
 	backgroundMusic.currentTime = timeStamp;
 	backgroundMusic.play();

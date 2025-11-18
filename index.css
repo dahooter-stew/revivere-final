@@ -244,7 +244,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 5%;
+	padding: 0 3%;
 	border-bottom: solid 2px black;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 	transition: transform 0.3s ease-in-out;
@@ -267,6 +267,7 @@ header > img {
 
 nav > ul{
 	list-style: none;
+	height: 100%;
 }
 
 nav > ul > li {
@@ -275,9 +276,88 @@ nav > ul > li {
 	font-size: 1.25rem;
 }
 
+nav > ul > li:hover {
+	background-color: rbga(255, 255, 255, 1);
+	opacity: 0.5;
+}
+
+
 nav > ul > li > a {
 	text-decoration: none;
 	color: inherit;
+}
+
+header > label {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 10rem;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #8c8877;
+  border-radius: 0.4rem;
+  height: 0.4rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: 0px; /* Centers thumb on the track */
+  background-color: #353326;
+  border-radius: 0.4rem;
+  height: 0.4rem;
+  width: 15%;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline: 3px solid #353326;
+  outline-offset: 0.125rem;
+}
+
+input[type="range"]::-moz-range-track {
+  background-color: #8c8877;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background-color: #353326;
+  border: none;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+  width: 7%;
+}
+
+input[type="range"]:focus::-moz-range-thumb{
+  outline: 3px solid #353326;
+  outline-offset: 0.125rem;
+}
+
+#music_toggle_container {
+	position: absolute;
+	bottom: 1.5vh;
+	right: 4vw;
+	z-index: 1000;
+	color: rgba(255, 255, 255, 0.4);
+	user-select: none;
+	cursor: pointer;
+}
+
+#music_toggle_container label {
+	display: flex;
+	align-items: center;
 }
 
 #music_toggle {

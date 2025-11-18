@@ -21,16 +21,17 @@ h1 {
 	padding: 0;
 	margin: 0;
 	text-transform: uppercase;
+	font-size: 4rem;
   font-weight: bold;
   letter-spacing: 0.7rem;
-  text-shadow: 0.15rem 0.15rem 0 rgba(140, 136, 119, 0.4);
+  text-shadow: 0.2rem 0.2rem 0 rgba(140, 136, 119, 0.4);
 }
 
 .nier_button .header_square {
 	background-color: #4d493e;
-	width: 0.9375rem;
-	height: 0.9375rem;
-	margin-right: 4px;
+	width: 0.8em;
+	height: 0.8em;
+	margin-right: 0.3em;
 }
 
 .nier_button:hover .header_square {
@@ -43,7 +44,7 @@ h1 {
 	flex-direction: row;
 	align-items: center;
 	cursor: pointer;
-	font-size: 1rem;
+	font-size: 1.75rem;
 	letter-spacing: 0.25rem;
 	border: none;
 	padding: 0.4rem 1rem;
@@ -258,7 +259,8 @@ main {
 	height: var(--section_height);
 }
 
-#hero_label {
+#kekw {
+	margin: 0;
 }
 
 #hero_label > div{
@@ -268,7 +270,7 @@ main {
 }
 
 #hero_label h1{
-	font-size: calc(var(--section_height) * 0.10);
+	
 	position: relative;
 	left: calc(var(--section_content_left_gap) * -1);
 }
@@ -288,11 +290,11 @@ main {
 	flex: 1;
 	position: relative;
 	left: calc(var(--section_content_left_gap) * -1.02);
-	width: calc(100% + var(--section_content_left_gap));
+	width: calc(100% + var(--section_content_left_gap) * 1.35);
 }
 
 #hero_title > .nier_map_label {
-	height: 69%;
+	height: min(69%, fit-content);
 	/*border: solid 1px red;*/
 	display: flex;
 	flex-direction: column;
@@ -304,7 +306,7 @@ main {
 	justify-content: space-evenly;
 }
 
-.nier_map_label h2 {
+h2 {
 	font-size: calc(var(--section_height) * 0.05);
 	padding: 0;
 	margin: 0;
@@ -313,7 +315,8 @@ main {
 	letter-spacing: 0.25rem;
 }
 
-.nier_map_label h3 {
+h3 {
+	font-size: calc(var(--section_height) * 0.032);
 	padding: 0;
 	margin: 0;
 	font-weight: 300;
@@ -321,7 +324,8 @@ main {
 	letter-spacing: 0.075rem;
 }
 
-.nier_map_label h4 {
+h4 {
+	font-size: calc(var(--section_height) * 0.03);
 	padding: 0;
 	margin: 0;
 	font-weight: 300;
@@ -410,24 +414,52 @@ main {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	width: 7%;
+	width: 10%;
 	display: flex;
 	align-items: center;
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.carousel_button span{
+	width: 20px;
+	height: 20px;
+	border: solid white;
+	border-width: 0 3px 3px 0; /* Adjust border-width for desired arrow size */
+	display: inline-block;
+	padding: 3px; /* Adjust padding for desired arrow size */
 }
 
 .carousel_button:hover {
-	background-color: rgba(255, 255, 255, 0.5);
+	opacity: 0.45;
+	transition: opacity 0.075s linear;
+	cursor: pointer;
 }
 
 .carousel_button button {
 	display: none;
 }
 
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg); /* For browser compatibility */
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
 #next {
 	right: 0;
+	background: linear-gradient(to left, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 35%, rgba(255, 255, 255, 0) 100%);
 }
 #prev {
 	left: 0;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 35%, rgba(255, 255, 255, 0) 100%);
 }
 
 .carousel_button label {
@@ -436,11 +468,46 @@ main {
 
 #hero_bottom {
 	height: calc(var(--section_height) * 0.10);
+	margin-left: 0;
 }
 
-#hero_bottom > div{
+#hero_bottom .marquee {
 	height: 100%;
-	grid-column: span 3;
+	width: 97%;
+	margin-left: auto;
+}
+
+.marquee {
+	display: flex;
+	overflow: hidden;
+	user-select: none;
+}
+
+.marquee h2 {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+
+.marquee ul {
+	list-style: none;
+	flex-shrink: 0;
+	min-width: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 1.5rem;
+
+	animation: scroll-left 100s linear infinite;
+}
+
+.marquee li {
+	white-space: nowrap;
+}
+
+@keyframes scroll-left {
+  to {
+  	transform: translateX(-100%);
+  }
 }
 
 #about {

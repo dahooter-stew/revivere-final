@@ -854,6 +854,7 @@ h4 {
 #logo_image {
 	width: 80%;
 	aspect-ratio: 1;
+	border: solid 5px #1c1814;
 	margin-top: 5%;
 	background-image: url("./assets/site_images/logo.png");
 	background-color: #dad4bb;

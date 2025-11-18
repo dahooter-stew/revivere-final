@@ -593,6 +593,13 @@ h4 {
 	aspect-ratio: 4 / 3;
 }
 
+#class_picture img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border: solid 1px;
+}
+
 #team_label_container {
 	height: fit-content;
 	position: absolute;
@@ -611,11 +618,15 @@ h4 {
 	grid-column: span 2;
 }
 
+.bar {
+	background-color: #353326;
+	background-image: linear-gradient(90deg, #8c8877, #8c8877 14px, transparent 14px, transparent 20px, #8c8877 20px, #8c8877 23px, transparent 23px);
+
+}
+
 #team_description {
 	height: calc(var(--section_height) * 0.10);
 	margin-bottom: calc(var(--section_height) * 0.05);
-	background-color: #353326;
-	background-image: linear-gradient(90deg, #8c8877, #8c8877 14px, transparent 14px, transparent 20px, #8c8877 20px, #8c8877 23px, transparent 23px);
 }
 
 #team_box {
@@ -652,18 +663,17 @@ h4 {
 }
 
 #about_content {
-	min-height: calc(var(--section_height) * 0.645);
+	min-height: calc(var(--section_height) * 0.645);\
+	height: 100%;
 }
 
 #about_description {
 	grid-column: span 2;
-	background-color: lavender;
-	height: 100%;
+	background-color: #353326;
 }
 
 #about_logo {
-	background-color: honeydew;
-	height: 100%;
+	background-color: #353326;
 }
 
 #footer {

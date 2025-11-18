@@ -5,6 +5,7 @@
 	--section_content_width: calc(var(--section_width) * 0.841);
 	--section_content_left_gap: calc(var(--section_width) * 0.05);
 	--section_column_gap: calc(var(--section_width) * 0.0396);
+	--box_width: calc((var(--section_content_width) - 2 * var(--section_column_gap)) / 3) ;
 }
 
 body {
@@ -20,11 +21,30 @@ body {
 h1 {
 	padding: 0;
 	margin: 0;
+	font-size: calc(var(--box_width) * 0.155);
 	text-transform: uppercase;
-	font-size: 4rem;
-  font-weight: bold;
-  letter-spacing: 0.7rem;
-  text-shadow: 0.2rem 0.2rem 0 rgba(140, 136, 119, 0.4);
+	font-weight: bold;
+	letter-spacing: 0.7rem;
+	text-shadow: 0.2rem 0.2rem 0 rgba(140, 136, 119, 0.4);
+	display: flex;
+	flex-direction: column;
+}
+
+h1 span {
+	margin-right: -0.7rem;
+	margin-bottom: 0.1em;
+}
+
+h1 small {
+	font-weight: 300;
+	text-transform: none;
+	text-shadow: none;
+	letter-spacing: 0.1rem;
+	font-size: 0.55em;
+	width: 100%;
+	text-align: right;
+	position: relative;
+	right: -0.45em;
 }
 
 .nier_button .header_square {
@@ -197,13 +217,12 @@ nav {
 main {
 	background-color: #1c1814;
 	background-size: 6px 6px;
-  background-image: linear-gradient(to right, rgba(16, 9, 3, 0.25) 1px, transparent 1px), linear-gradient(to bottom, rgba(16, 9, 3, 0.25) 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(16, 9, 3, 0.5) 1px, transparent 1px), linear-gradient(to bottom, rgba(16, 9, 3, 0.5) 1px, transparent 1px);
   width: min(100%, var(--section_width));
   margin: auto;
   padding-top: 40px;
   display: flex;
   flex-direction: column;
-  gap: calc(var(--section_height) * 0.05);
 }
 
 .pattern_container {
@@ -232,6 +251,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	margin-bottom: calc(var(--section_height) * 0.12);
 }
 
 .section_content_wrapper {
@@ -260,7 +280,7 @@ main {
 }
 
 #welcome {
-	height: var(--section_height);
+	min-height: var(--section_height);
 	display: flex;
 	flex-direction: column;
 	gap: calc(var(--section_height) * 0.05);
@@ -323,8 +343,33 @@ main {
 	justify-content: space-evenly;
 }
 
+.nier_map_label > div {
+	display: flex;
+	align-items: center;
+}
+
+.circles_container {
+	display: grid;
+  grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+  gap: 9%;
+  width: 3.5em;
+  height: 3.5em;
+  transform: rotate(45deg);
+  margin: 0 1em;
+}
+
+.circles_icon {
+	background-color: #c8bf9b;;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2em;
+	border-radius: 50%;
+}
+
 h2 {
-	font-size: calc(var(--section_height) * 0.069);
+	font-size: calc(var(--section_height) * 0.063);
 	padding: 0;
 	font-weight: 300;
 	margin-block: 5px;
@@ -493,6 +538,7 @@ h4 {
 
 .marquee {
 	display: flex;
+	align-items: center;
 	overflow: hidden;
 	user-select: none;
 }
@@ -530,11 +576,35 @@ h4 {
 }
 
 #team div {
-	border: solid 1px;
+
 }
 
 #team_label {
 	grid-column: span 1;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#class_picture {
+	background-color: #353326;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+}
+
+#team_label_container {
+	height: fit-content;
+	position: absolute;
+	left: calc(var(--section_content_left_gap) * -0.35);
+	display: flex;
+	flex-direction: column;
+}
+
+#team_label_container h3{
+	background-color: red;
+	width: 90%;
+	text-align: right;
 }
 
 #team_menu {
@@ -545,22 +615,57 @@ h4 {
 	height: calc(var(--section_height) * 0.10);
 	margin-bottom: calc(var(--section_height) * 0.05);
 	background-color: #353326;
-
+	background-image: linear-gradient(90deg, #8c8877, #8c8877 14px, transparent 14px, transparent 20px, #8c8877 20px, #8c8877 23px, transparent 23px);
 }
 
 #team_box {
 	height: calc(var(--section_height) * 0.53);
+	background-color: #353326;
 }
 
 #profiles_container {
 	row-gap: calc(var(--section_height) * 0.05);;
 }
 
-#profiles_container div {
-	border: solid 1px;
-	height: 300px;
+.profile{
+
+}
+
+.profile_header {
+	background-color: #8c8877;
+	height: calc(var(--section_height) * 0.06)
+}
+
+.profile_content {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	background-color: #353326;
 }
 
 #about {
-	height: var(--section_height);
+	min-height: var(--section_height);
+}
+
+#about_title small {
+	width: 150%;
+	margin-left: 10%;
+}
+
+#about_content {
+	min-height: calc(var(--section_height) * 0.645);
+}
+
+#about_description {
+	grid-column: span 2;
+	background-color: lavender;
+	height: 100%;
+}
+
+#about_logo {
+	background-color: honeydew;
+	height: 100%;
+}
+
+#footer {
+	height: calc(var(--section_height) * 0.10);
 }

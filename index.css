@@ -28,7 +28,7 @@ h1 {
 }
 
 .nier_button .header_square {
-	background-color: #4d493e;
+	background-color: #1c1814;
 	width: 0.8em;
 	height: 0.8em;
 	margin-right: 0.3em;
@@ -44,12 +44,12 @@ h1 {
 	flex-direction: row;
 	align-items: center;
 	cursor: pointer;
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 	letter-spacing: 0.25rem;
 	border: none;
 	padding: 0.4rem 1rem;
 	background-color: #a49d82;
-	color: #4d493e;
+	color: #1c1814;
 	box-sizing: content-box;
 	position: relative;
 	border: 1px solid transparent;
@@ -196,9 +196,14 @@ nav {
 
 main {
 	background-color: #1c1814;
+	background-size: 6px 6px;
+  background-image: linear-gradient(to right, rgba(16, 9, 3, 0.25) 1px, transparent 1px), linear-gradient(to bottom, rgba(16, 9, 3, 0.25) 1px, transparent 1px);
   width: min(100%, var(--section_width));
   margin: auto;
   padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--section_height) * 0.05);
 }
 
 .pattern_container {
@@ -223,7 +228,6 @@ main {
 .section {
 	width: min(84%, var(--section_content_width));
 	margin-left: min(12%, var(--title_gap));
-	margin-bottom: 20px;
 	/*border: solid 1px pink;*/
 	display: flex;
 	flex-direction: column;
@@ -257,6 +261,18 @@ main {
 
 #welcome {
 	height: var(--section_height);
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--section_height) * 0.05);
+}
+
+.section hr {
+	width: 100%;
+	height: 3px;
+	margin-block: 0;
+	padding-block: 0;
+	border: none;
+	background-color: #dad4bb;
 }
 
 #kekw {
@@ -276,12 +292,13 @@ main {
 }
 
 #hero {
-	height: calc(var(--section_height) * 0.645);
+	min-height: calc(var(--section_height) * 0.645);
 }
 
 #hero_click {
 	height: 100%;
 	display: flex;
+	gap: calc(var(--section_height) * 0.05);
 	flex-direction: column;
 	position: relative;
 }
@@ -307,12 +324,12 @@ main {
 }
 
 h2 {
-	font-size: calc(var(--section_height) * 0.05);
+	font-size: calc(var(--section_height) * 0.069);
 	padding: 0;
-	margin: 0;
 	font-weight: 300;
+	margin-block: 5px;
 	width: 85%;
-	letter-spacing: 0.25rem;
+	letter-spacing: 0.1rem;
 }
 
 h3 {
@@ -321,6 +338,7 @@ h3 {
 	margin: 0;
 	font-weight: 300;
 	margin-left: calc(var(--section_content_left_gap) * 0.45);
+	margin-bottom: 2px;
 	letter-spacing: 0.075rem;
 }
 
@@ -330,15 +348,11 @@ h4 {
 	margin: 0;
 	font-weight: 300;
 	letter-spacing: 0.05rem;
+	margin-top: 2px;
 }
 
 .nier_map_label hr {
-	width: 100%;
 	height: 2px;
-	background-color: #c8bf9b;
-	border: none;
-	padding: 0;
-	margin: 0;
 }
 
 .nier_map_label div {
@@ -360,13 +374,13 @@ h4 {
 #hero_buttons .nier_button {
 	margin-top: calc(var(--section_height) * 0.012);
 	margin-bottom: calc(var(--section_height) * 0.012);
-	height: calc(var(--section_height) * 0.06);
+	height: min(20%, calc(var(--section_height) * 0.045));
 }
 
 #hero_button_bar {
 	position: absolute;
 	top: 0;
-	left: calc(var(--section_content_left_gap) * -1.02);
+	left: calc(var(--section_content_left_gap) * -1);
 	width: calc(100% + var(--section_content_left_gap));
 	height: 100%;
 }
@@ -487,6 +501,7 @@ h4 {
 	text-align: center;
 	font-size: 1.5rem;
 	font-weight: 300;
+	margin: 0;
 }
 
 .marquee ul {
@@ -508,6 +523,42 @@ h4 {
   to {
   	transform: translateX(-100%);
   }
+}
+
+#team > .section_content_wrapper {
+	margin-bottom: calc(var(--section_height) * 0.05);
+}
+
+#team div {
+	border: solid 1px;
+}
+
+#team_label {
+	grid-column: span 1;
+}
+
+#team_menu {
+	grid-column: span 2;
+}
+
+#team_description {
+	height: calc(var(--section_height) * 0.10);
+	margin-bottom: calc(var(--section_height) * 0.05);
+	background-color: #353326;
+
+}
+
+#team_box {
+	height: calc(var(--section_height) * 0.53);
+}
+
+#profiles_container {
+	row-gap: calc(var(--section_height) * 0.05);;
+}
+
+#profiles_container div {
+	border: solid 1px;
+	height: 300px;
 }
 
 #about {

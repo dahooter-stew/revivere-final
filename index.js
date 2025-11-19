@@ -11,7 +11,7 @@ window.addEventListener('scroll', () => {
     // Condition 1: Hide/Show logic
     if (currentScrollY > headerHeight) {
         // Only show/hide the sticky nav once we are past the main header
-        if (currentScrollY > lastScrollY && currentScrollY > headerHeight) {
+        if (currentScrollY > lastScrollY && currentScrollY > headerHeight + 64) {
             // Scrolling DOWN
             stickyNav.classList.add('nav-hidden');
         } else {
@@ -55,17 +55,14 @@ buttons[1].addEventListener("click", () => {
 
 
 //MUSIC
-
-
-
 const playlist = [
+	"Shadowlords Castle (Memory)",
 	"City Ruins (Rays of Light)",
 	"Song of the Ancients (Devola)",
 	"Ashes of Dreams (Aratanaru)",
 	"Blissful Death",
 	"Faltering Prayer (Dawn Breeze)",
 	"Fortress of Lies",
-	"Shadowlords Castle (Memory)",
 	"City Ruins (Shade)",
 	"Amusement Park",
 	"Kaine Salvation",
@@ -78,12 +75,15 @@ const playlist = [
 let index = 0;
 let timeStamp = 0;
 let volume = 15;
+let entered = false;
 const musicToggle = document.getElementById("music_toggle");
 let musicVolume = document.getElementById("music_volume");
 const backgroundMusic = document.getElementById("background_music");
 
 function playNext()
 {
+	console.log("ended")
+
 	backgroundMusic.src = "./assets/background_music/" + playlist[index].toLowerCase().replace(/\s+/g, "_") + ".mp3";
 	backgroundMusic.currentTime = timeStamp;
 	backgroundMusic.volume = (volume / 100);
@@ -92,6 +92,7 @@ function playNext()
 
 	console.log(backgroundMusic.src);
 	console.log("music playing", index - 1);
+	console.log(index)
 }
 
 function playStop()
@@ -113,6 +114,29 @@ musicToggle.addEventListener("change", (event) => {
 		backgroundMusic.currentTime = timeStamp;
 		backgroundMusic.volume = (volume / 100);
 		backgroundMusic.play();
+
+		if (!entered) index += 1;
+		entered = true;
 	}
-	else 					 playStop();
+	else playStop();
+});
+
+
+//COMMITTEES
+const committeeButtons = document.querySelectorAll('.com_butt');
+const profilesContainer = document.querySelectorAll('.profile_box');
+
+committeeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Use data-target to find the correct member group ID
+        const targetId = button.getAttribute('data-target');
+        profilesContainer.forEach(group => group.classList.remove('hidden-members'));
+        profilesContainer.forEach(group => group.classList.add('hidden-members'));
+        
+        // Show the corresponding member group
+        const targetGroup = document.getElementById(targetId);
+        if (targetGroup) {
+            targetGroup.classList.remove('hidden-members');
+        }
+    });
 });

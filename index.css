@@ -880,10 +880,6 @@ h4 {
 	margin-bottom: 1.5%;
 }
 
-#profiles_container {
-	row-gap: calc(var(--section_height) * 0.05);
-}
-
 #team_box_content {
 	display: flex;
 	flex-direction: column;
@@ -905,13 +901,30 @@ h4 {
 	background-color: #4d493e;
 }
 
-.profile{
+.profile:hover {
+	transform: scale(1.03);
+}
+
+.profile:hover .header {
+	color: #1c1814;	
+}
+
+.profile:hover .header_square {
+	background-color: #1c1814;	
+}
+
+.hidden-members {
+	display: none;
 }
 
 .header {
 	height: calc(var(--section_height) * 0.06);
 	font-size: 1.25rem;
 	color: #4d493e;
+}
+
+.profiles_container {
+	row-gap: calc(var(--section_height) * 0.05);
 }
 
 .profile_header {
@@ -927,8 +940,29 @@ h4 {
 
 .profile_content {
 	width: 100%;
-	aspect-ratio: 1 / 1;
 	background-color: #353326;
+	padding-block: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.profile_content img {
+	width: 70%;
+	aspect-ratio: 4 / 3;
+	border: solid 1px;
+}
+
+.profile_name {
+	width: 90%;
+	margin-top: 15px;
+	font-size: 1.5rem;
+	text-align: right;
+}
+
+.profile_name hr {
+	margin-bottom: 7px;
 }
 
 #about {

@@ -23,6 +23,16 @@ body {
 	letter-spacing: 0.1rem;
 }
 
+.nier_map_label {
+	font-size: 1.25rem;
+	margin-bottom: 3rem;
+}
+
+.nier_map_label div {
+	display: flex;
+	align-items: center;
+}
+
 .nier_button .header_square {
 	background-color: #1c1814;
 	margin-right: 0.3em;
@@ -319,25 +329,124 @@ main {
 	margin-left: var(--section_content_left_gap);
 }
 
+
+#hero_click {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: calc(var(--section_height) * 0.05);
+}
+
+#visual {
+	min-height: var(--section_height);
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--section_height) * 0.05);
+}
+
+.circles_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 12%;
+    width: 3.5em;
+    height: 3.5em;
+    transform: rotate(45deg);
+    margin: 0 1em;
+}
+.circles_icon {
+    background-color: #c8bf9b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    border-radius: 50%;
+}
+
+h2 {
+    font-size: calc(var(--section_height) * 0.063);
+    padding: 0;
+    font-weight: 300;
+    margin-block: 5px;
+    width: 85%;
+    letter-spacing: 0.1rem;
+}
+
+h3 {
+    font-size: calc(var(--section_height) * 0.032);
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    margin-left: calc(var(--section_content_left_gap) * 0.45);
+    margin-bottom: 2px;
+    letter-spacing: 0.075rem;
+}
+h4 {
+    font-size: calc(var(--section_height) * 0.03);
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+    margin-top: 2px;
+}
+
+#hero {
+    min-height: calc(var(--section_height) * 0.645);
+}
+
+:root {
+    --section_height: calc(100vh * 0.872);
+    --section_width: calc(var(--section_height) * 2.346);
+    --title_gap: calc(var(--section_width) * 0.1226);
+    --section_content_width: calc(var(--section_width) * 0.841);
+    --section_content_left_gap: calc(var(--section_width) * 0.05);
+    --section_column_gap: calc(var(--section_width) * 0.0396);
+    --box_width: calc((var(--section_content_width) - 2 * var(--section_column_gap)) / 3);
+}
+
 .section_content div {
 	/*border: solid 1px;*/
 }
+.collage {
+  columns: 4 200px;
+  width: 100%;
+  margin: auto;
+}
+
+.frame {
+  width: 100%;
+  overflow: hidden;
+  border: 3px solid #8c8877; /* frame border color */
+  border-radius: 8px; /* optional rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame img {
+  width: 100%;
+  object-fit: cover; /* ensures images fill the frame without distortion */
+  display: block;
+}
 
 h1 {
-	padding: 0;
-	margin: 0;
-	font-size: calc(var(--box_width) * 0.155);
-	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: 0.7rem;
-	text-shadow: 0.2rem 0.2rem 0 rgba(140, 136, 119, 0.4);
-	display: flex;
-	flex-direction: column;
+    padding: 0;
+    margin: 0;
+    font-size: calc(var(--box_width) * 0.155);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.7rem;
+    text-shadow: 0.2rem 0.2rem 0 rgba(140, 136, 119, 0.4);
+    display: inline-flex;
+    flex-direction: row; 
+    white-space: nowrap; 
 }
 
 h1 span {
-	margin-right: -0.7rem;
-	margin-bottom: 0.1em;
+    margin-right: -0.7rem;
+    margin-bottom: 0; 
 }
 
 h1 small {

@@ -1,24 +1,115 @@
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+* {
+    border: none !important;
+}
+
 body {
-	width: 100vw;
-	height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-	display: grid;
-  	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-  	gap: 10%;
-  	border: solid 1px;
-  	width: 100px;
-  	height: 100px;
-  	transform: rotate(45deg);
+.gbg {
+    background-image: url('assets/site_images/gallerybg.png'); /* Replace with your image path */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll; /* Allows the background to scroll with the page content */
+    min-height: 120vh;
+    margin: 0;
+    padding: 0;
 }
 
-.corner {
-	background-color: lightblue; /* Optional: for visual distinction */
-  	display: flex;
-  	justify-content: center;
-  	align-items: center;
-  	font-size: 1.2em;
-  	border-radius: 50%;
+.e {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 0;
+}
+.e a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.e img {
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+h2 {
+    font-family: "Crimson Pro";
+    color: white;
+    font-size: 28px;
+    height: 10px;
+    margin-top: 5px;
+}
+
+.e img {
+    max-width: 65%;
+    max-height: 10%;
+    display: block;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+#visualglink:hover img {
+	transform: scaleX(1.0);
+}
+
+#literaryglink:hover img {
+	transform: scaleX(1.0);
+}
+
+#music_toggle_container {
+	position: absolute;
+	bottom: -10vh;
+	right: 3.5vw;
+	z-index: 1000;
+	color: rgba(255, 255, 255, 0.4);
+	user-select: none;
+	cursor: pointer;
+}
+
+#music_toggle_container label {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+#music_toggle {
+	width: 0;
+	height: 0;
+	display: none;
+}
+
+#music_toggle_icon {
+	background-color: #4d493e;
+	height: 18px;
+	width: 46px;
+	margin-right: 0.4rem;
+	border-radius: 46px;
+	display: inline-block;
+	position: relative;
+}
+
+#music_toggle_icon:after {
+	content: "";
+	background-color: #8c8877;
+	position: absolute;
+	top: 2px;
+	left: 4px;
+	width: 14px;
+	height: 14px;
+	border-radius: 18px;
+	transition: 0.078s;
+}
+
+#music_toggle:checked + label #music_toggle_icon:after {
+	transform: translateX(24px);
+	transition: 0.078s;
 }

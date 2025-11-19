@@ -6,37 +6,301 @@
 	<title>Document</title>
 
 	<style>
+		:root {
+			--section_height: calc(100vh * 0.872);
+			--section_width: calc(var(--section_height) * 2.346);
+			--title_gap: calc(var(--section_width) * 0.1226);
+			--section_content_width: calc(var(--section_width) * 0.841);
+			--section_content_left_gap: calc(var(--section_width) * 0.05);
+			--section_column_gap: calc(var(--section_width) * 0.0396);
+			--box_width: calc((var(--section_content_width) - 2 * var(--section_column_gap)) / 3) ;
+		}
+
 		body {
+			background-color: black;
+			color: #c8bf9b;
 			margin: 0;
-			padding: 0;
+			font-family: "Noto Sans", sans-serif;
+			font-weight: 300;
+			min-height: 100vh;
+			letter-spacing: 0.1rem;
 		}
 
 		.section {
-			columns: 4 2rem;
-			background-color: khaki;
-			height: 200vh;
-			width: 70vw;
+			background-color: khaki;			
 			margin: auto;
-			padding-block: 50px;
+			width: 80%;
+			columns: 4 200px;
+			column-gap: 1em;
 		}
 
 		.output {
 			border: solid 1px;
-			min-height: 200px;
+			width: 200px;
+			height: 400px;
 		}
+
+		img {
+			display: block;
+			margin-bottom: 20px;
+			width: 100%;
+		}
+
+		.section > img {
+			cursor: pointer;
+		}
+
+		.hidden {
+			display: none;
+		}
+
+		#work {
+			position: fixed;
+			width: 90vh;
+			height: 90vh;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			margin: auto;
+			background-color: lavender;
+			z-index: 1000;
+		}
+
+		.header_square {
+			background-color: #1c1814;
+			width: 1.5rem;
+			height: 1.5rem;
+			margin-right: 0.3rem;
+			margin-left: 1%;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			text-align: center;
+			user-select: none;
+			cursor: pointer;
+		}
+
+		hr {
+			height: 2px;
+			border: none;
+			background-color: #dad4bb;
+		}
+
+		#output_header {
+			width: 100%;
+			height: calc(var(--section_height) * 0.06);
+			font-size: 1.25rem;
+			color: #4d493e;
+			background-color: #a49d82;
+			display: flex;
+			align-items: center;
+		}
+
+		.thick {
+			height: 3px;
+		}
+
+		#output_content {
+			height: calc(100% - calc(var(--section_height) * 0.06));
+			overflow-y: scroll;
+			scrollbar-width: thin;
+			scrollbar-color: #1c1814 transparent;
+			padding: 0 5%;
+			background-color: #353326;;
+			font-weight: 300;
+		}
+
+		#output_content h2 {
+			font-weight: 300;
+			letter-spacing: 0.2rem;
+		}
+
+		#output_content h3 {
+			font-weight: 300;
+			letter-spacing: 0.2rem;
+		}
+
+		#output_content p {
+			letter-spacing: 0.1rem;
+		}
+
+		#output img {
+			width: 90%;
+		}
+
+		#explanation {
+			text-align: justify;
+		}
+
+		#biography {
+			text-align: justify;
+		}
+
+		#end {
+			text-align: center;
+			letter-spacing: 0.3rem;
+		}
+
+		#end span {
+			margin-top: 10px;
+		}
+
 	</style>
 </head>
 <body>
-		<div class="section">
-			<div class="output"></div>
-			<div class="output"></div>
-			<div class="output"></div>
-			<div class="output"></div>
-			<div class="output"></div>
-			<div class="output"></div>
-			<div class="output"></div>
-			<div class="output"></div>
-			<div class="output"></div>
+	<div class="section">
+		<img src="./assets/slideshow/1.JPG" alt="" onclick="displayContent('1')">
+		<img src="./assets/slideshow/2.JPG" alt="" onclick="displayContent('2')">
+		<img src="./assets/slideshow/3.JPG" alt="" onclick="displayContent('3')">
+		<img src="./assets/slideshow/4.JPG" alt="" onclick="displayContent('4')">
+		<img src="./assets/slideshow/5.JPG" alt="" onclick="displayContent('5')">
+		<img src="./assets/slideshow/6.JPG" alt="" onclick="displayContent('6')">
+		<img src="./assets/slideshow/7.JPG" alt="" onclick="displayContent('7')">
+		<img src="./assets/slideshow/8.JPG" alt="" onclick="displayContent('8')">
+		<img src="./assets/slideshow/9.JPG" alt="" onclick="displayContent('9')">
+		<img src="./assets/slideshow/10.JPG" alt="" onclick="displayContent('10')">
+		<img src="./assets/slideshow/11.JPG" alt="" onclick="displayContent('11')">
+		<img src="./assets/slideshow/12.JPG" alt="" onclick="displayContent('12')">
+		<img src="./assets/slideshow/13.JPG" alt="" onclick="displayContent('13')">
+		<img src="./assets/slideshow/14.JPG" alt="" onclick="displayContent('14')">
+		<img src="./assets/slideshow/15.JPG" alt="" onclick="displayContent('15')">
+		<img src="./assets/slideshow/16.JPG" alt="" onclick="displayContent('16')">
+		<img src="./assets/slideshow/17.JPG" alt="" onclick="displayContent('17')">
+		<img src="./assets/slideshow/18.JPG" alt="" onclick="displayContent('18')">
+		<img src="./assets/slideshow/19.JPG" alt="" onclick="displayContent('19')">
+		<img src="./assets/slideshow/20.JPG" alt="" onclick="displayContent('20')">
+		<img src="./assets/slideshow/21.JPG" alt="" onclick="displayContent('21')">
+		<img src="./assets/slideshow/22.JPG" alt="" onclick="displayContent('22')">
+		<img src="./assets/slideshow/23.JPG" alt="" onclick="displayContent('23')">
+		<img src="./assets/slideshow/24.JPG" alt="" onclick="displayContent('24')">
+		<img src="./assets/slideshow/25.JPG" alt="" onclick="displayContent('25')">
+		<img src="./assets/slideshow/26.JPG" alt="" onclick="displayContent('26')">
+		<img src="./assets/slideshow/27.JPG" alt="" onclick="displayContent('27')">
+		<img src="./assets/slideshow/28.JPG" alt="" onclick="displayContent('28')">
+		<img src="./assets/slideshow/29.JPG" alt="" onclick="displayContent('29')">
+	</div>
+
+	<div id="work" class="hidden">
+		<div id="output_header">
+			<span class="header_square" id="x">X</span>
+			Output
 		</div>
+		<div id="output_content">
+			<div id="title"><h2><hr class="thick">Title: <span id="output_title">WHYY</span><hr></h2></div>
+			<div id="name"><h3>By: <span id="output_author">satoru gojo</span></h3><hr></div>
+			<div id="output"><img src="./assets/site_images/test.JPG" alt="" id="output_content"></div>
+			<div id="explanation"><hr><p id="output_explanation">lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum </p><hr></div>
+			<div id="biography">
+				<p id="output_biography">
+					lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum lorem dimsum 
+				</p>
+				<hr>
+			</div>
+			<div id="end"><span>END OF TRANSCRIPT</span><hr class="thick"></div>
+		</div>
+	</div>
+
+	<script>
+		const outputs = {
+			"acosta": {
+				"name": "Mico Angelo Acosta",
+				"title": "Tile Ko",
+			},
+			"aguirre": {
+				"name": "Kat Aguirre"
+			},
+			"baconguis": {
+				"name": "Ryz Francheska Baconguis"
+			},
+			"bajade": {
+				"name": "Jann Alexandrei Bajade"
+			},
+			"banaag": {
+				"name": "Angelica Grace Banaag "
+			},
+			"bertiz": {
+				"name": "Ashley Grace Bertiz"
+			},
+			"bolado": {
+				"name": "Kristel Charisse Bolado",
+			},
+			"bonita": {
+				"name": "Micah Bonita",
+			},
+			"buenaventura": {
+				"name": "Pauleen Joyce Buenaventura",
+			},
+			"cabagui": {
+				"name": "Marvin Daniel Cabagui",
+			},
+			"cale": {
+				"name": "Aaron Cohen Cale",
+			},
+			"caliwag": {
+				"name": "Kaella Maye Caliwag",
+			},
+			"capina": {
+				"name": "Elaiza Jennifer Capina",
+			},
+			"capulong": {
+				"name": "Dexter Allen Capulong",
+			},
+			"deri": {
+				"name": "Angel Alyssa Deri",
+			},
+			"esternon": {
+				"name": "Princess Megan Esternon",
+			},
+			"fernandez": {
+				"name": "Aaron Fernandez",
+			},
+			"garcia": {
+				"name": "Enrico Garcia",
+			},
+			"lofranco": {
+				"name": "Lawrence Lofranco",
+			},
+			"poserio": {
+				"name": "Jewel Glyn Poserio",
+			},
+			"santos": {
+				"name": "Maria Sasha Anika Santos",
+			},
+			"sazon": {
+				"name": "Aryanna Reign Sazon",
+			},
+			"watil": {
+				"name": "Zeke Gabriel Watil",
+			}
+		}
+
+		const work = document.getElementById("work");
+		const outputTitle = document.getElementById("output_title");
+		const outputAuthor = document.getElementById("output_author");
+		const outputContent = document.getElementById("output");
+		const outputExplanation = document.getElementById("output_explanation");
+		const outputBiography = document.getElementById("output_biography");
+
+		function displayContent(name)
+		{
+			work.classList.remove("hidden");
+			outputAuthor.innerHTML = name;
+			const fileLoc = "./assets/slideshow/" + name + ".JPG";
+			outputContent.innerHTML = '<img src="' + fileLoc + '" alt="" id="output_content">';
+		}
+
+		let url_string = window.location;
+		let url = new URL(url_string);
+		let namee = url.searchParams.get("name");
+
+		if (namee != null) {
+		    //displayContent(namee)
+		}
+
+		const closeButton = document.getElementById("x");
+		closeButton.addEventListener("click", (event) => {
+			work.classList.add("hidden")
+		});
+	</script>
 </body>
 </html>

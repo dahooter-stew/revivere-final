@@ -221,7 +221,7 @@ h1 small {
 	height: 1vh;
 	display: block;
 	transform: scaleX(0);
-	transition: transform 0.3s ease-in-out;
+	transition: transform 0.2s ease-in-out;
 }
 
 a {
@@ -368,6 +368,7 @@ input[type="range"]:focus::-moz-range-thumb{
 #music_toggle_container label {
 	display: flex;
 	align-items: center;
+	cursor: pointer;
 }
 
 #music_toggle {
@@ -899,6 +900,10 @@ h4 {
 
 #team_box .header_square {
 	background-color: #4d493e;
+}
+
+.profile {
+	transition: transform 0.1s ease;
 }
 
 .profile:hover {

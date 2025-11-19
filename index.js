@@ -86,7 +86,7 @@ function playNext()
 
 	backgroundMusic.src = "./assets/background_music/" + playlist[index].toLowerCase().replace(/\s+/g, "_") + ".mp3";
 	backgroundMusic.currentTime = timeStamp;
-	backgroundMusic.volume = (volume / 100);
+	backgroundMusic.volume = 0.2 * (volume / 100);
 	backgroundMusic.play();
 	index = (index + 1) % playlist.length;
 
@@ -112,7 +112,7 @@ musicToggle.addEventListener("change", (event) => {
 	{
 		backgroundMusic.src = "./assets/background_music/" + playlist[index].toLowerCase().replace(/\s+/g, "_") + ".mp3";
 		backgroundMusic.currentTime = timeStamp;
-		backgroundMusic.volume = (volume / 100);
+		backgroundMusic.volume = 0.2 * (volume / 100);
 		backgroundMusic.play();
 
 		if (!entered) index += 1;

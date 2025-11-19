@@ -224,7 +224,7 @@ h1 small {
 	transition: transform 0.3s ease-in-out;
 }
 
-#enter {
+a {
 	text-decoration: none;
 }
 
@@ -601,17 +601,19 @@ h4 {
 #hero_buttons {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: space-around;
 	height: fit-content;
 	position: relative;
-	padding-top: calc(var(--section_height) * 0.012);
-	padding-bottom: calc(var(--section_height) * 0.012);
+	height: 42%;
+}
+
+#hero_buttons a {
+	display: inline-block;
+	height: min(20%, calc(var(--section_height) * 0.045));
 }
 
 #hero_buttons .nier_button {
-	margin-top: calc(var(--section_height) * 0.012);
-	margin-bottom: calc(var(--section_height) * 0.012);
-	height: min(20%, calc(var(--section_height) * 0.045));
+	width: 90%;
 }
 
 #hero_button_bar {

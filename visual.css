@@ -580,3 +580,19 @@ hr {
 #end span {
 	margin-top: 10px;
 }
+
+.bold {
+	font-weight: bold;
+}
+
+.center {
+	text-align: center;
+}
+
+.indent {
+	margin-left: 2rem;
+}
+
+.italic {
+	font-style: italic;
+}

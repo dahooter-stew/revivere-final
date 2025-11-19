@@ -60,20 +60,20 @@ buttons[1].addEventListener("click", () => {
 
 const playlist = [
 	"City Ruins (Rays of Light)",
-	"Amusement Park",
+	"Song of the Ancients (Devola)",
 	"Ashes of Dreams (Aratanaru)",
 	"Blissful Death",
-	"City Ruins (Shade)",
 	"Faltering Prayer (Dawn Breeze)",
-	"Faltering Prayer (Starry Sky)",
 	"Fortress of Lies",
+	"Shadowlords Castle (Memory)",
+	"City Ruins (Shade)",
+	"Amusement Park",
 	"Kaine Salvation",
 	"Peaceful Sleep",
-	"Repose",
-	"Shadowlords Castle (Memory)",
-	"Song of the Ancients (Devola)",
 	"Vague Hope (Cold Rain)",
-	"Voice of no Return "
+	"Faltering Prayer (Starry Sky)",
+	"Voice of no Return ",
+	"Repose"
 ];
 let index = 0;
 let timeStamp = 0;
@@ -107,6 +107,12 @@ musicVolume.addEventListener("input", () => {
 
 backgroundMusic.addEventListener("ended", playNext);
 musicToggle.addEventListener("change", (event) => {
-	if (musicToggle.checked) playNext();
+	if (musicToggle.checked) 
+	{
+		backgroundMusic.src = "./assets/background_music/" + playlist[index].toLowerCase().replace(/\s+/g, "_") + ".mp3";
+		backgroundMusic.currentTime = timeStamp;
+		backgroundMusic.volume = (volume / 100);
+		backgroundMusic.play();
+	}
 	else 					 playStop();
 });

@@ -220,6 +220,16 @@ h1 small {
 	width: 20vw;
 	height: 1vh;
 	display: block;
+	transform: scaleX(0);
+	transition: transform 0.3s ease-in-out;
+}
+
+#enter {
+	text-decoration: none;
+}
+
+#enter:hover img {
+	transform: scaleX(1.0);
 }
 
 header {
@@ -348,7 +358,7 @@ input[type="range"]:focus::-moz-range-thumb{
 #music_toggle_container {
 	position: absolute;
 	bottom: 1.5vh;
-	right: 4vw;
+	right: 3.5vw;
 	z-index: 1000;
 	color: rgba(255, 255, 255, 0.4);
 	user-select: none;
@@ -651,7 +661,7 @@ h4 {
 }
 
 .carousel_button {
-	z-index: 1000;
+	z-index: 800;
 	position: absolute;
 	top: 0;
 	bottom: 0;

@@ -12,17 +12,18 @@ body {
 .gbg {
     background-image: url('assets/site_images/gallerybg.png'); /* Replace with your image path */
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center -15vh;
     background-size: cover;
     background-attachment: scroll; /* Allows the background to scroll with the page content */
-    min-height: 120vh;
+    height: 100vh;
+    width: 100vw;
     margin: 0;
     padding: 0;
 }
 
 .e {
     position: absolute;
-    top: 80%;
+    top: 68%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -67,7 +68,7 @@ h2 {
 
 #music_toggle_container {
 	position: absolute;
-	bottom: -10vh;
+	bottom: 1.5vh;
 	right: 3.5vw;
 	z-index: 1000;
 	color: rgba(255, 255, 255, 0.4);

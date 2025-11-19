@@ -961,6 +961,7 @@ h4 {
 	width: 70%;
 	aspect-ratio: 1;
 	border: solid 1px;
+	object-fit: cover;
 }
 
 .profile_name {

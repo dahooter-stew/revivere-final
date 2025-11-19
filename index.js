@@ -56,8 +56,8 @@ buttons[1].addEventListener("click", () => {
 
 //MUSIC
 const playlist = [
-	"Shadowlords Castle (Memory)",
 	"City Ruins (Rays of Light)",
+	"Shadowlords Castle (Memory)",
 	"Song of the Ancients (Devola)",
 	"Ashes of Dreams (Aratanaru)",
 	"Blissful Death",

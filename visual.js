@@ -1,6 +1,7 @@
 //NAVBAR
 const stickyNav = document.getElementById('navbar');
 let lastScrollY = window.scrollY;
+
 window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
     if (currentScrollY > lastScrollY) 

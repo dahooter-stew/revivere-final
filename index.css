@@ -14,7 +14,11 @@ html {
 }
 
 body {
-	background-color: black;
+	background-color: #1c1814;
+	background-image: url("./assets/site_images/dim_stars.png");
+	background-size: 100% auto;
+	background-size: fit;
+	background-repeat: repeat-y;
 	color: #c8bf9b;
 	margin: 0;
 	font-family: "Noto Sans", sans-serif;
@@ -410,7 +414,6 @@ main {
   background-image: linear-gradient(to right, rgba(16, 9, 3, 0.5) 1px, transparent 1px), linear-gradient(to bottom, rgba(16, 9, 3, 0.5) 1px, transparent 1px);
   width: min(100%, var(--section_width));
   margin: auto;
-  padding-top: 40px;
   display: flex;
   flex-direction: column;
 }

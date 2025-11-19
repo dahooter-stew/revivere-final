@@ -14,7 +14,11 @@ html {
 }
 
 body {
-	background-color: black;
+	background-color: #1c1814;
+	background-image: url("./assets/site_images/dim_stars.png");
+	background-size: 100% auto;
+	background-size: fit;
+	background-repeat: repeat-y;
 	color: #c8bf9b;
 	margin: 0;
 	font-family: "Noto Sans", sans-serif;
@@ -136,9 +140,9 @@ header.nav-hidden {
 header > img {
 	background-color: #dad4bb;
 	background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 50%;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	border-radius: 50%;
 	max-height: 80%;
 	aspect-ratio: 1;
 }
@@ -404,6 +408,12 @@ h4 {
   width: 100%;
   object-fit: cover; /* ensures images fill the frame without distortion */
   display: block;
+  cursor: pointer;
+  transition: opacity 0.1 ease;
+}
+
+.frame img:hover {
+	opacity: 0.75;
 }
 
 h1 {
@@ -416,7 +426,6 @@ h1 {
     text-shadow: 0.2rem 0.2rem 0 rgba(140, 136, 119, 0.4);
     display: inline-flex;
     flex-direction: row; 
-    white-space: nowrap; 
 }
 
 h1 span {
@@ -452,4 +461,122 @@ h1 small {
 .bar h2 {
 	font-size: 1.5rem;
 	letter-spacing: 0.3rem;
+}
+
+.hidden {
+	display: none;
+}
+
+#work {
+	position: fixed;
+	width: 70vw;
+	height: 90vh;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: auto;
+	background-color: lavender;
+	z-index: 1000;
+}
+
+#work a {
+	color: inherit;
+}
+
+.header_square {
+	background-color: #1c1814;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-right: 0.3rem;
+	margin-left: 1%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	text-align: center;
+	user-select: none;
+	cursor: pointer;
+}
+
+hr {
+	height: 2px;
+	border: none;
+	background-color: #dad4bb;
+}
+
+#output_header {
+	width: 100%;
+	height: calc(var(--section_height) * 0.06);
+	font-size: 1.25rem;
+	color: #4d493e;
+	background-color: #a49d82;
+	display: flex;
+	align-items: center;
+}
+
+.thick {
+	height: 3px;
+	width: 100%;
+}
+
+#output_content {
+	height: calc(100% - calc(var(--section_height) * 0.06));
+	overflow-y: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: #1c1814 transparent;
+	padding: 0 3.5%;
+	background-color: #353326;;
+	font-weight: 300;
+}
+
+#output_content h1 {
+	margin: 0 auto;
+	letter-spacing: 0.5rem;
+}
+
+#output_content h2 {
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+#output_content h3 {
+	font-weight: 300;
+	letter-spacing: 0.2rem;
+}
+
+#output_content p {
+	letter-spacing: 0.1rem;
+}
+
+#title {
+	text-align: center;
+	margin-top: 2%;
+}
+
+#output {
+	margin-top: 1%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+#output img {
+	width: 90%;
+}
+
+#explanation {
+	text-align: justify;
+}
+
+#biography {
+	text-align: justify;
+}
+
+#end {
+	text-align: center;
+	letter-spacing: 0.3rem;
+}
+
+#end span {
+	margin-top: 10px;
 }

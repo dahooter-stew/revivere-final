@@ -565,12 +565,13 @@ hr {
 	color: #4d493e;
 	font-weight: 300;
 	line-height: 1.5rem;
-	letter-spacing: 1.3rem;
+	letter-spacing: 1.05rem;
 }
 
 #output_content h1 {
 	margin: 0 auto;
 	letter-spacing: 0.5rem;
+	line-height: 4rem;
 }
 
 #output_content h2 {

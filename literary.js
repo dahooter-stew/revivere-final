@@ -257,6 +257,7 @@ const outputAuthor = document.getElementById("output_author");
 const outputContent = document.getElementById("output");
 const outputExplanation = document.getElementById("output_explanation");
 const outputBiography = document.getElementById("output_biography");
+const biographyProfile = document.getElementById("biography_profile");
 
 function displayContent(name)
 {
@@ -267,6 +268,7 @@ function displayContent(name)
     outputAuthor.innerHTML = outputs[name].name;
     outputExplanation.innerHTML = outputs[name].explanation;
     outputBiography.innerHTML = outputs[name].biography;
+    biographyProfile.src = "./assets/profiles/" + name + ".jpg";
 }
 
 const closeButton = document.getElementById("x");

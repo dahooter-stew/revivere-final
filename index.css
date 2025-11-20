@@ -67,6 +67,10 @@ h1 small {
 	margin-right: 0.3rem;
 }
 
+.shadow {
+	box-shadow: 5px 5px rgba(125, 119, 92, .6);
+}
+
 .nier_button .header_square {
 	background-color: #1c1814;
 	margin-right: 0.3em;
@@ -928,10 +932,13 @@ h4 {
 
 .profile {
 	transition: transform 0.1s ease;
+	cursor: pointer;
 }
 
 .profile:hover {
 	transform: scale(1.03);
+	box-shadow: 4px 4px rgba(125, 119, 92, .45);
+
 }
 
 .profile:hover .header {
@@ -1124,4 +1131,66 @@ h4 {
 
 #footer {
 	height: calc(var(--section_height) * 0.10);
+}
+
+.hidden {
+	display: none;
+}
+
+#output_header {
+	width: 100%;
+	height: calc(var(--section_height) * 0.06);
+	font-size: 1.25rem;
+	color: #4d493e;
+	background-color: #a49d82;
+	display: flex;
+	align-items: center;
+}
+
+#biography_container {
+	width: 60vw;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: justify;
+	aspect-ratio: 2.5;
+	background-color: #353326;
+}
+
+#biography_container .header_square {
+	background-color: #1c1814;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-right: 0.3rem;
+	margin-left: 1%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	text-align: center;
+	user-select: none;
+	cursor: pointer;
+}
+
+#biography_content {
+	height: 100%;
+	display: flex;
+	padding-right: 5%;
+	overflow-y: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: #1c1814 transparent;
+}
+
+#biography_profile_box {
+	height: 100%;
+	aspect-ratio: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#biography_profile {
+	width: 80%;
+	margin-top: 5%;
+	object-fit: cover;
 }

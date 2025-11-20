@@ -564,6 +564,8 @@ hr {
 	background-color: #dad4bb;
 	color: #4d493e;
 	font-weight: 300;
+	line-height: 1.5rem;
+	letter-spacing: 1.3rem;
 }
 
 #output_content h1 {

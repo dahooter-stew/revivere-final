@@ -786,6 +786,10 @@ hr {
 		display: block;
 	}
 
+	.bar {
+		padding-left: 2rem;
+	}
+
 	/* --- Make the pattern margins smaller --- */
 	.pattern_outer {
 		padding: 0 1.5rem;

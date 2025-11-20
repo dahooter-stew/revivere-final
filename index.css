@@ -855,7 +855,6 @@ h4 {
 
 #class_picture img {
 	width: 100%;
-	height: 100%;
 	object-fit: cover;
 	border: solid 1px;
 }
@@ -1250,4 +1249,284 @@ h4 {
 	width: 80%;
 	margin-top: 5%;
 	object-fit: cover;
+}
+
+/* ===========================================
+   MOBILE & SMALL SCREEN MEDIA QUERIES
+   =========================================== */
+
+
+/* --- Mobile (max 768px) - Main breakpoint --- */
+@media (max-width: 768px) {
+
+  :root {
+    --section_height: auto;
+    --section_width: 100%;
+    --section_content_left_gap: 1rem;
+    --section_column_gap: 1rem;
+    --box_width: auto;
+  }
+
+  body {
+    letter-spacing: 0.05rem;
+    font-size: 10px;
+  }
+
+  /* -------- START SCREEN -------- */
+  #start_content {
+    width: 80vw;
+  }
+
+  #title_img {
+    margin-top: 25vh;
+    margin-bottom: 4vh;
+    width: 100%;
+  }
+
+  .cool_text img {
+    width: 60vw;
+  }
+
+  /* -------- HEADER -------- */
+  header {
+    padding: 0 1rem;
+    height: 60px;
+    justify-content: flex-end;
+  }
+
+  nav {
+  	display: none;
+  }
+
+  /* -------- MAIN LAYOUT -------- */
+  main {
+		background-color: #1c1814;
+		background-size: 9px 9px;
+	  background-image: linear-gradient(to right, rgba(16, 9, 3, 0.5) 1px, transparent 1px), linear-gradient(to bottom, rgba(16, 9, 3, 0.5) 1px, transparent 1px);
+	  max-width: 100vw;
+	  display: flex;
+	  flex-direction: column;
+	  position: relative;
+	}
+
+  #side_title {
+    display: none !important;
+  }
+
+  .section {
+		margin-left: 0;
+		width: 100vw;
+		margin-bottom: 5rem;
+	}
+
+	.section_content_wrapper {
+		max-width: 95vw;
+		margin: 0 auto;
+		padding-left: 3vw;
+	}
+
+  /* Section content from 3 columns → 1 column */
+  .section_content {
+    grid-template-columns: 1fr;
+    margin-left: 1rem;
+   	margin-top: 1rem;
+   	margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+  }
+
+  #hero_label {
+  	grid-column: span 1;
+  }
+
+  #kekw h1 {
+  	font-size: 2rem;
+  	position: relative;
+  	left: 0;
+  }
+
+  .nier_map_label {
+  	margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin-left: 0;
+  }
+
+  h4 {
+    font-size: 0.95rem;
+  }
+
+  /* -------- HERO SECTION -------- */
+
+  #kekw {
+  	margin-left: 5vw;
+  }
+
+  #hero {
+    height: 100%;
+    gap: 2rem;
+  }
+
+  #hero_title {
+    left: 0;
+    width: 100%;
+  }
+
+  #hero_buttons {
+  	height: fit-content;
+  	padding-left: 2vw;
+  	gap: 1rem;
+  }
+
+  #hero_buttons .nier_button {
+    width: 90%;
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
+
+  .circles_container {
+    width: 2.5em;
+    height: 2.5em;
+  }
+
+  #team_description {
+  	display: none;
+  }
+
+  #team_label {
+  	grid-column: span 1;
+  	position: relative;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: space-between;
+  }
+
+  #team_label_container {
+  	position: relative;
+  	height: fit-content;
+  	display: flex;
+  	flex-direction: row;
+  	left: 0;
+  	margin-bottom: 2rem;
+  }
+
+  #team_label_container h3{
+  }
+
+  #team_label_container h1 {
+  	padding: 0;
+  	margin: 0;
+  	font-size: 1.75rem;
+  	text-transform: uppercase;
+  	font-weight: bold;
+  	letter-spacing: 0.7rem;
+  	text-shadow: 0.2rem 0.2rem 0 rgba(140, 136, 119, 0.4);
+  }
+
+  #team_description {
+  	height: 100vh;
+  }
+
+  #team_box {
+  	min-height: fit-content;
+  	background-color: #353326;
+  	position: relative;
+  	overflow-y: scroll;
+  	scrollbar-width: thin;
+  	scrollbar-color: #1c1814 transparent;
+  	padding-bottom: 2rem;
+  	margin-bottom: 2rem;
+  }
+
+  #team_box_header {
+  	height: 4rem;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: flex-end;
+  	padding-left: 20px;
+  	/*background-color: red;*/
+  	font-size: 1.33rem;
+  	letter-spacing: 0.2rem;
+  	color: #c8bf9b;
+  }
+
+  .profiles_container {
+  	grid-template-columns: 1fr 1fr;
+  	gap: 1.5rem;
+  }
+
+  .header_square {
+  	all: initial;
+  	width: 1em;
+  	height: 1em;
+  	margin-right: 2%;
+  }
+
+  .section_edge {
+  	display: none;
+  }
+
+  .profile_name {
+  	font-size: 1.15rem;
+  }
+
+  /* -------- SLIDESHOW -------- */
+  #slideshow {
+    grid-column: span 1;  /* was span 2 */
+  }
+
+  .carousel {
+    height: 250px;
+  }
+
+  .carousel_button {
+    opacity: 0.25;
+    width: 15%;
+  }
+
+}
+
+
+/* --- Very small devices (max 480px) --- */
+@media (max-width: 480px) {
+
+  :root {
+    --section_column_gap: 0.75rem;
+    --section_content_left_gap: 0.5rem;
+  }
+
+  body {
+  	font-size: 10px;
+  }
+
+  header {
+    padding: 0 0.75rem;
+  }
+
+  nav > ul > li {
+    font-size: 0.85rem;
+    padding: 0 5px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .nier_button {
+    font-size: 1rem;
+  }
+
+  .carousel {
+    height: 200px;
+  }
 }

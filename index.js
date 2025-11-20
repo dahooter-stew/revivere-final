@@ -92,6 +92,7 @@ function playNext()
 	backgroundMusic.volume = 0.2 * (volume / 100);
 	backgroundMusic.play();
 	index = (index + 1) % playlist.length;
+	if (index > playlist.length) index = 0;
 
 	console.log(backgroundMusic.src);
 	console.log("music playing", index - 1);
@@ -115,6 +116,9 @@ musicToggle.addEventListener("change", (event) => {
 	{
 		someToggle.checked = true;
 		volumeContainer.classList.remove("hidden");
+
+		index %= playlist.length;
+		if (index > playlist.length) index = 0;
 
 		backgroundMusic.src = "./assets/background_music/" + playlist[index].toLowerCase().replace(/\s+/g, "_") + ".mp3";
 		backgroundMusic.currentTime = timeStamp;

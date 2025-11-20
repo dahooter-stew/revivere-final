@@ -283,5 +283,5 @@ closeButton.addEventListener("click", (event) => {
 let url = new URL(window.location);
 let authorName = url.searchParams.get("name");
 if (authorName != null) {
-    //displayContent(namee)
+    displayContent(authorName)
 }

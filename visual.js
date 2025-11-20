@@ -17,6 +17,7 @@ window.addEventListener('scroll', () => {
     lastScrollY = currentScrollY;
 });
 
+
 const outputs = {
     "acosta": {
         "name": "Mico Angelo Acosta",
@@ -217,7 +218,7 @@ const outputs = {
     "mendoza": {
         "name": "Aaron Gabriel Mendoza",
         "title": `<span class="bold">Salinlahi</span>`,
-        "output": ``,
+        "output": `<img src="./assets/literary_outputs/mendoza.png" alt="mendoza">`,
         "explanation": `Sa pagsasanib-puwersa ng Agham at Sining, tampok sa akdang “Salinlahi” ang masalimuot na kasaysayan ng ebolusyon at pagpapanibagong-hubog ng laksa-laksang anyong-buhay sa nagdaang angaw-angaw na taon. Alinsunod sa pamagat, nakahulma ang tula sa sangay-sangay na estetika at estruktura ng isang Phylogenetic Tree. Mula sa isang pangunahing ideya, umuusbong at sumasangay ang iba’t iba pang linya. Ngunit—sapagkat lahat ng buhay sa mundo ay nanggagaling sa iisang angkan—iisang ninuno, at iisang anino: lahat ay iisa, iisa ang lahat. Iisa ang tula.`,
         "biography": `Si Aaron Gabriel A. Mendoza ay isang manunulat mula sa Antipolo City na naligaw sa kursong Batsilyer ng Agham sa Panggugubat ng Unibersidad ng Pilipinas Los Banos. Layon niya—sa bawat pagkakataon—na hasain ang kaniyang panulat, palawigin ang kaniyang kakayanang pampanitikan, at patalasin ang kaniyang boses sa panunula.`
     },
@@ -283,5 +284,5 @@ closeButton.addEventListener("click", (event) => {
 let url = new URL(window.location);
 let authorName = url.searchParams.get("name");
 if (authorName != null) {
-    //displayContent(namee)
+    displayContent(authorName)
 }

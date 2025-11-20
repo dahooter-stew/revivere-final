@@ -641,12 +641,15 @@ hr {
 	width: 100%;
 	text-align: justify;
 	display: flex;
-	justify-content: space-between;
 }
 
 #biography_profile_box {
-	width: 50vw;
+	width: 30%;
 	padding-top: 2%;
+}
+
+#text {
+	width: 70%;
 }
 
 #biography_profile_box img {

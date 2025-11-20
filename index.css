@@ -222,7 +222,7 @@ h1 small {
 }
 
 #musop > #SOMETOGGLE:checked + label {
-	transform: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
 }
 
 #musop > #SOMETOGGLE:checked + label {
@@ -1258,7 +1258,9 @@ h4 {
 
 /* --- Mobile (max 768px) - Main breakpoint --- */
 @media (max-width: 768px) {
-
+	small {
+		display: none;
+	}
   :root {
     --section_height: auto;
     --section_width: 100%;
@@ -1270,6 +1272,7 @@ h4 {
   body {
     letter-spacing: 0.05rem;
     font-size: 10px;
+    scrollbar-gutter: stable; /* Reserves space for the scrollbar */
   }
 
   /* -------- START SCREEN -------- */
@@ -1309,6 +1312,11 @@ h4 {
 	  position: relative;
 	}
 
+	#description_text hr {
+		display: block;
+		height: 3;
+	}
+
   #side_title {
     display: none !important;
   }
@@ -1316,7 +1324,8 @@ h4 {
   .section {
 		margin-left: 0;
 		width: 100vw;
-		margin-bottom: 5rem;
+		margin-bottom: 2rem;
+		gap: 2rem;
 	}
 
 	.section_content_wrapper {
@@ -1447,6 +1456,14 @@ h4 {
   	margin-bottom: 2rem;
   }
 
+  #goac {
+  	display: none;
+  }
+
+  #first_map {
+  	border-block: solid 2px;
+  }
+
   #team_box_header {
   	height: 4rem;
   	display: flex;
@@ -1479,6 +1496,14 @@ h4 {
   	font-size: 1.15rem;
   }
 
+  #about_content {
+  	gap: 2rem;
+  }
+
+  #footer_bar {
+  	margin-top: 2rem;
+  }
+
   /* -------- SLIDESHOW -------- */
   #slideshow {
     grid-column: span 1;  /* was span 2 */
@@ -1491,6 +1516,28 @@ h4 {
   .carousel_button {
     opacity: 0.25;
     width: 15%;
+  }
+
+
+  #biography_container {
+  	width: 85vw;
+  	aspect-ratio: 1.5;
+  	position: fixed;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	text-align: justify;
+  	background-color: #dad4bb;
+  	color: #4d493e;
+  	box-shadow: 5px 5px rgba(77, 73, 62, .4);
+  }
+
+  #biography_profile_box {
+  	height: 50%;
+  	aspect-ratio: 1;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
   }
 
 }
@@ -1524,6 +1571,25 @@ h4 {
 
   .nier_button {
     font-size: 1rem;
+  }
+  #hero_buttons .nier_button {
+    width: 70%;
+    height: 20%;
+    margin-left: 2rem;
+  }
+
+  .profile_header {
+  	font-size: 0.9rem;
+  }
+
+  .profile_name {
+  	font-size: 0.9rem;
+  }
+
+  header_square {
+  	all: initial;
+  	width: 0.6rem;
+  	height: 0.6rem;
   }
 
   .carousel {

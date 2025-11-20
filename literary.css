@@ -595,6 +595,8 @@ hr {
 	background-color: #dad4bb;
 	color: #4d493e;
 	font-weight: 300;
+	line-height: 1.5rem;
+	letter-spacing: 1.3rem;
 }
 
 #output_content h1 {
@@ -656,10 +658,10 @@ hr {
 	width: 90%
 }
 
-
 #output_content img {
 	margin-bottom: 20px;
 }
+
 #end {
 	text-align: center;
 	letter-spacing: 0.3rem;

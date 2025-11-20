@@ -11,7 +11,7 @@ body {
 
 .gbg {
     background-image: url('assets/site_images/gallerybg.png'); /* Replace with your image path */
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-position: center -15vh;
     background-size: cover;
     background-attachment: scroll; /* Allows the background to scroll with the page content */

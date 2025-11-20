@@ -656,3 +656,72 @@ hr {
 .italic {
 	font-style: italic;
 }
+
+
+@media (max-width: 768px) {
+	small {
+		display: none;
+	}
+  :root {
+    --section_height: auto;
+    --section_width: 100%;
+    --section_content_left_gap: 1rem;
+    --section_column_gap: 1rem;
+    --box_width: auto;
+  }
+
+  body {
+    letter-spacing: 0.05rem;
+    font-size: 10px;
+    scrollbar-gutter: stable; /* Reserves space for the scrollbar */
+  }
+
+  /* -------- START SCREEN -------- */
+  #start_content {
+    width: 80vw;
+  }
+
+  #title_img {
+    margin-top: 25vh;
+    margin-bottom: 4vh;
+    width: 100%;
+  }
+
+  .cool_text img {
+    width: 60vw;
+  }
+
+  /* -------- HEADER -------- */
+  header {
+    padding: 0 1rem;
+    height: 60px;
+    justify-content: flex-end;
+  }
+
+  nav {
+  	display: none;
+  }
+
+  h1 {
+  	font-size: 2rem;
+  }
+
+  .collage {
+  	columns: 2;
+  	margin-block:;
+  }
+
+  #work {
+  	position: fixed;
+  	width: 70vw;
+  	height: 60vh;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -75%);
+  	margin: auto;
+  	background-color: #dad4bb;
+  	color: #4d493e;
+  	box-shadow: 5px 5px rgba(77, 73, 62, .4);
+  	z-index: 1000;
+  }
+}

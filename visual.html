@@ -24,10 +24,15 @@
 					<li><a href="./index.html#about">EULOGY</a></li>
 				</ul>
 			</nav>
-			<label for="music_volume">
-				<i class="fa fa-volume-up"></i>
-				<input type="range" id="music_volume" min="0" max="100" value="50">
-			</label>
+			<span id="music_toggle_container">
+				<span id="toggle_mus" class="hidden">
+					<label for="music_volume">
+						<i class="fa fa-volume-up"></i>
+						<input type="range" id="music_volume" min="0" max="100" value="50">
+					</label>
+				</span>
+				<input type="checkbox" id="music_toggle"><label for="music_toggle"><span id="music_toggle_icon"></span>Toggle Music</label>
+			</span>
 		</header>
 		<main>
 			<div class="pattern_container" id="top_pattern">
@@ -121,6 +126,7 @@
 			</div>
 		</div>
 
+		<audio id="background_music"></audio>
 		<script src="./visual.js"></script>
 </body>
 </html>

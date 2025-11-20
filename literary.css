@@ -251,13 +251,12 @@ input[type="range"]:focus::-moz-range-thumb{
 }
 
 #music_toggle_container {
-	position: absolute;
-	bottom: 1.5vh;
-	right: 3.5vw;
 	z-index: 1000;
 	color: rgba(255, 255, 255, 0.4);
 	user-select: none;
 	cursor: pointer;
+	display: flex;
+	gap: 10px;
 }
 
 #music_toggle_container label {

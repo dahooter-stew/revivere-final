@@ -46,8 +46,10 @@ let timeStamp = 0;
 let volume = 50;
 let presses = 0;
 const musicToggle = document.getElementById("music_toggle");
-let musicVolume = document.getElementById("music_volume");
+const musicVolume = document.getElementById("music_volume");
+const volumeContainer = document.getElementById("toggle_mus")
 const backgroundMusic = document.getElementById("background_music");
+
 
 function playNext()
 {
@@ -79,6 +81,7 @@ backgroundMusic.addEventListener("ended", playNext);
 musicToggle.addEventListener("change", (event) => {
     if (musicToggle.checked) 
     {
+        volumeContainer.classList.remove("hidden");
 
         backgroundMusic.src = "./assets/background_music/" + playlist[index].toLowerCase().replace(/\s+/g, "_") + ".mp3";
         backgroundMusic.currentTime = timeStamp;
@@ -92,22 +95,25 @@ musicToggle.addEventListener("change", (event) => {
     }
     else 
     {
+        volumeContainer.classList.add("hidden");
+
         if (presses == 1) index -= 1;
         playStop();
     }
 });
 
-const hrefs = document.querySelectorAll('a');
+cconst hrefs = document.querySelectorAll('a');
 
 hrefs.forEach(href => {
   href.addEventListener('click', () => {
-    //const lastTime = parseFloat(localStorage.getItem("musicTime"));
-
-    localStorage.setItem("musicTime", timeStamp.toString());
+    localStorage.setItem("musicIndex", index.toString());
+    console.log((index - 1).toString());
   });
 });
 
-if (document.referrer)
+const fromIndex = localStorage.getItem("musicIndex");
+if (!(fromIndex === "NaN"))
 {
-    timeStamp = parseFloat(localStorage.getItem("musicTime"));
+    index = parseInt(fromIndex)
+    console.log(fromIndex)
 }

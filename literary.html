@@ -24,10 +24,15 @@
 					<li><a href="./index.html#about">EULOGY</a></li>
 				</ul>
 			</nav>
-			<label for="music_volume">
-				<i class="fa fa-volume-up"></i>
-				<input type="range" id="music_volume" min="0" max="100" value="50">
-			</label>
+			<span id="music_toggle_container">
+				<span id="toggle_mus" class="hidden">
+					<label for="music_volume">
+						<i class="fa fa-volume-up"></i>
+						<input type="range" id="music_volume" min="0" max="100" value="50">
+					</label>
+				</span>
+				<input type="checkbox" id="music_toggle"><label for="music_toggle"><span id="music_toggle_icon"></span>Toggle Music</label>
+			</span>
 		</header>
 		<main>
 			<div class="pattern_container" id="top_pattern">
@@ -233,7 +238,7 @@
 			</div>
 			<div class="section no_space">
 				<div class="section_content_wrapper no_sidebar">
-					<div class="literary_box" id="zuleta" onclick="displayContent('zuleta');">
+					<div class="literary_box" id="zuleta" onclick="displayContent('zulueta');">
 						<div class="literary_work">
 							<div>
 								<i class="fa fa-clock-o" aria-hidden="true" style="font-size: 8em;"></i>
@@ -276,6 +281,8 @@
 				<div id="end"><hr><span>END OF TRANSCRIPT</span><hr class="thick"></div>
 			</div>
 		</div>
+
+		<audio id="background_music"></audio>
 		<script src="./literary.js"></script>
 	</body>
 </html>

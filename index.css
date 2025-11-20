@@ -858,6 +858,11 @@ h4 {
 	letter-spacing: 0.3rem;
 }
 
+.bar a {
+	text-decoration: none;
+	color: inherit;
+}
+
 #team_description {
 	height: calc(var(--section_height) * 0.10);
 	margin-bottom: calc(var(--section_height) * 0.05);
@@ -1064,6 +1069,12 @@ h4 {
 
 #description_text .thin {
 	height: 2px;
+}
+
+.thick {
+	height: 3px;
+	border: none;
+	background-color: #c8bf9b;
 }
 
 .centered {

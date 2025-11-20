@@ -487,6 +487,11 @@ h1 small {
 	letter-spacing: 0.3rem;
 }
 
+.bar a {
+	text-decoration: none;
+	color: inherit;
+}
+
 .hidden {
 	display: none;
 }
@@ -593,7 +598,23 @@ hr {
 }
 
 #biography {
+	width: 100%;
 	text-align: justify;
+	display: flex;
+	justify-content: space-between;
+}
+
+#biography_profile_box {
+	width: 50vw;
+	padding-top: 2%;
+}
+
+#biography_profile_box img {
+	width: 90%
+}
+
+#text_container {
+	overflow-y: scroll;
 }
 
 #end {

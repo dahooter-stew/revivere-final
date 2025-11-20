@@ -676,21 +676,6 @@ hr {
     scrollbar-gutter: stable; /* Reserves space for the scrollbar */
   }
 
-  /* -------- START SCREEN -------- */
-  #start_content {
-    width: 80vw;
-  }
-
-  #title_img {
-    margin-top: 25vh;
-    margin-bottom: 4vh;
-    width: 100%;
-  }
-
-  .cool_text img {
-    width: 60vw;
-  }
-
   /* -------- HEADER -------- */
   header {
     padding: 0 1rem;
@@ -698,30 +683,64 @@ hr {
     justify-content: flex-end;
   }
 
+  #AAA {
+  	margin-bottom: 2rem;
+  }
+
   nav {
   	display: none;
   }
 
   h1 {
-  	font-size: 2rem;
-  }
+		font-size: 2rem;
+		letter-spacing: 0.3rem;
+	}
+
+	h3, h4 {
+		font-size: 1.1rem;
+		margin-left: 0;
+	}
 
   .collage {
   	columns: 2;
-  	margin-block:;
+  	margin-block: 2rem;
+  }
+
+  #footer {
+  	margin-bottom: 1rem;
   }
 
   #work {
   	position: fixed;
-  	width: 70vw;
-  	height: 60vh;
-  	top: 50%;
+  	width: 95vw;
+		height: 90vh;  	
+		top: 50%;
   	left: 50%;
-  	transform: translate(-50%, -75%);
+  	transform: translate(-50%, -50%);
   	margin: auto;
   	background-color: #dad4bb;
   	color: #4d493e;
   	box-shadow: 5px 5px rgba(77, 73, 62, .4);
   	z-index: 1000;
+  	overflow-y: scroll;
   }
+
+  #biography {
+		flex-direction: column;
+	}
+
+  #biography_profile_box,
+	#text {
+		width: 100%;
+	}
+
+  #biography_profile_box img {
+  	width: 70%;
+  	margin: 0 auto;
+  	display: block;
+  }
+
+  .pattern_outer {
+		padding: 0 1.5rem;
+	}
 }

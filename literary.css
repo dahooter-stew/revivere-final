@@ -687,3 +687,107 @@ hr {
 .italic {
 	font-style: italic;
 }
+
+
+/* ============================================
+   MOBILE LAYOUT — for screens ≤ 768px width
+   ============================================ */
+@media (max-width: 768px) {
+
+	/* --- Root variables scale down --- */
+	:root {
+		--section_height: calc(100vh * 0.55);
+		--section_width: 100vw;
+		--title_gap: 1.5rem;
+		--section_content_left_gap: 1rem;
+		--section_column_gap: 1rem;
+	}
+
+	/* --- Header cleanup --- */
+	header {
+		height: 56px;
+		padding: 0 1rem;
+		justify-content: flex-end;
+	}
+
+	nav {
+		display: none;
+	}
+
+	nav > ul > li {
+		padding: 0 10px;
+		font-size: 1rem;
+	}
+
+	/* --- Main container fits mobile --- */
+	main {
+		width: 100%;
+		padding: 0 1rem;
+	}
+
+	/* --- Section content: change 3 columns → 1 column --- */
+	.section_content {
+		grid-template-columns: 1fr !important;
+		margin-left: 0;
+		gap: 1.25rem;
+	}
+
+	/* --- Titles scale down --- */
+	h1 {
+		font-size: 2rem;
+		letter-spacing: 0.3rem;
+	}
+
+	h3, h4 {
+		font-size: 1.1rem;
+		margin-left: 0;
+	}
+
+	/* --- Reduce decorative bar height --- */
+	.bar {
+		height: auto;
+		padding: 0.75rem;
+	}
+
+	.bar h2 {
+		font-size: 1.25rem;
+	}
+
+	/* --- Collage: columns 4 → 2 --- */
+	.collage {
+		columns: 2;
+		column-gap: 6px;
+	}
+
+	/* --- Literary work boxes stack nicely --- */
+	.literary_work {
+		grid-template-columns: 22% 78%;
+	}
+
+	/* --- Popup window (#work) scaled for mobile --- */
+	#work {
+		width: 95vw;
+		height: 90vh;
+	}
+
+	/* --- Biography layout stacks vertically --- */
+	#biography {
+		flex-direction: column;
+	}
+
+	#biography_profile_box,
+	#text {
+		width: 100%;
+	}
+
+	#biography_profile_box img {
+		width: 70%;
+		margin: 0 auto;
+		display: block;
+	}
+
+	/* --- Make the pattern margins smaller --- */
+	.pattern_outer {
+		padding: 0 1.5rem;
+	}
+}

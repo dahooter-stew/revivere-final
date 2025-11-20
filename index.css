@@ -441,6 +441,7 @@ main {
   margin: auto;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .pattern_container {
@@ -460,6 +461,25 @@ main {
 
 #top {
 	margin-bottom: 20px;
+}
+
+#side_title {
+	position: absolute;
+	top: 100vh;
+	left: 3vw;
+  z-index: 100;
+}
+
+#side_title > h1 {
+	transform: rotate(-90deg) translateX(-22%); /* rotates text 90 degrees clockwise */
+  	transform-origin: top left; /* adjust pivot if needed */
+  	position: sticky;
+  	top: 85vh;  	
+  	font-family: 'Cinzel', serif;
+  	font-size: 5rem;
+  	font-weight: bold;
+  	text-shadow: -0.45rem 0.45rem 0 rgba(77, 73, 62, .4);
+  	letter-spacing: 1rem;
 }
 
 .section {

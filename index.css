@@ -206,13 +206,23 @@ h1 small {
 #title_img {
 	width: 100%;
 	margin-top: 33vh;
-	margin-bottom: 20px;
+	margin-bottom: 7vh;
 }
 
 .cool_text {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+#musop {
+	color: white;
+	margin-top: 5vh;
+	cursor: pointer;
+}
+
+#musop:hover {
+	opacity: 0.5;
 }
 
 .cool_text h2 {
@@ -465,7 +475,7 @@ main {
 
 #side_title {
 	position: absolute;
-	top: 100vh;
+	top: 200vh;
 	left: 3vw;
   z-index: 100;
 }
@@ -1172,8 +1182,8 @@ h4 {
 	width: 100%;
 	height: calc(var(--section_height) * 0.06);
 	font-size: 1.25rem;
-	color: #4d493e;
-	background-color: #a49d82;
+	color: #dad4bb;
+	background-color: #4d493e;
 	display: flex;
 	align-items: center;
 }
@@ -1186,11 +1196,12 @@ h4 {
 	transform: translate(-50%, -50%);
 	text-align: justify;
 	aspect-ratio: 2.5;
-	background-color: #353326;
+	background-color: #dad4bb;
+	color: #4d493e;
+	box-shadow: 5px 5px rgba(77, 73, 62, .4);
 }
 
 #biography_container .header_square {
-	background-color: #1c1814;
 	width: 1.5rem;
 	height: 1.5rem;
 	margin-right: 0.3rem;
@@ -1201,6 +1212,14 @@ h4 {
 	text-align: center;
 	user-select: none;
 	cursor: pointer;
+	background-color: #dad4bb;
+	color: #4d493e;
+}
+
+#biography_container hr {
+	border: none;
+	height: 3px;
+	background-color: #4d493e;
 }
 
 #biography_content {

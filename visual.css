@@ -433,11 +433,12 @@ h4 {
   object-fit: cover; /* ensures images fill the frame without distortion */
   display: block;
   cursor: pointer;
-  transition: opacity 0.1 ease;
+  transition: transform 0.2 ease;
 }
 
 .frame img:hover {
 	opacity: 0.75;
+	transform: scale(1.05);
 }
 
 h1 {
@@ -496,6 +497,10 @@ h1 small {
 	display: none;
 }
 
+.shadow {
+	box-shadow: 5px 5px rgba(125, 119, 92, .6);
+}
+
 #work {
 	position: fixed;
 	width: 70vw;
@@ -504,7 +509,9 @@ h1 small {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	margin: auto;
-	background-color: lavender;
+	background-color: #dad4bb;
+	color: #4d493e;
+	box-shadow: 5px 5px rgba(77, 73, 62, .4);
 	z-index: 1000;
 }
 
@@ -513,7 +520,6 @@ h1 small {
 }
 
 .header_square {
-	background-color: #1c1814;
 	width: 1.5rem;
 	height: 1.5rem;
 	margin-right: 0.3rem;
@@ -524,20 +530,23 @@ h1 small {
 	text-align: center;
 	user-select: none;
 	cursor: pointer;
+
+	background-color: #dad4bb;;
+	color: #4d493e;
 }
 
 hr {
 	height: 2px;
 	border: none;
-	background-color: #dad4bb;
+	background-color: #4d493e;
 }
 
 #output_header {
 	width: 100%;
 	height: calc(var(--section_height) * 0.06);
 	font-size: 1.25rem;
-	color: #4d493e;
-	background-color: #a49d82;
+	color: #dad4bb;
+	background-color: #4d493e;
 	display: flex;
 	align-items: center;
 }
@@ -553,7 +562,8 @@ hr {
 	scrollbar-width: thin;
 	scrollbar-color: #1c1814 transparent;
 	padding: 0 3.5%;
-	background-color: #353326;;
+	background-color: #dad4bb;
+	color: #4d493e;
 	font-weight: 300;
 }
 

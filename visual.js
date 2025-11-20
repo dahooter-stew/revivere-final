@@ -184,7 +184,7 @@ const outputs = {
         "name": "Jade Margareth Bassiag",
         "title": `<span class="bold">Reckoned Dream</span>`,
         "output": `<p>        Reckoned Dream<br><br>I set out at dawn with a place in mind,<br>Treading a path both far and wide.<br>With every step, I near my dream ahead,<br>A land where science thrives and nature’s not dead.<br><br>Turbines whirl where wild waters stream,<br>Crops grow, beneath the sun they gleam.<br>Energy conserved as the sunbeams teem,<br>Nature and progress woven in one seamless dream.<br><br>Excitement surged in every vein,<br>Innovation’s vision glimmered deep within. <br>Yet, beneath the surface, a shadow grew—<br>The promise of paradise faded from view.<br><br>The cars carved paths where the greens once grew<br>Factories painted  the skies in darkest blue<br>Forests were razed, the earth stripped bare; <br>Waters reflect mud, what a dreary sight to stare!<br><br>What was meant to be life,<br>Was now the cost of progress' strife.<br>Beneath the gleam of dreams once bright,<br>Wreckage and dust whisper horrors of fright.<br><br>The noises are deafening, my spirit worn;<br>I speak what the birds sing: “peace is what I mourn.” <br>I gazed through the glass at hope’s lost gleam,<br>Left to reckon the cost of a vanished dream.    </p>`,
-        "explanation": `A poem/short story that illustrates the contrast between the aspirations of scientific and technological advancements and their actual impacts, focusing particularly on environmental consequences. It begins from the perspective of a planned journey to a thriving town, filled with high hopes, but the traveler instead finds a devastated landscape—a reflection of the unintended consequences of innovations, such as pollution.`,
+        "explanation": `A poem about someone who dreams of a better world where science benefits both people and nature, but is confronted with the cost of progress. At first, everything seems hopeful and full of promise, but as progress continues, the environment suffers—forests are cut down, water is polluted, and nature fades away. As the dream is “reckoned,” the speaker mourns the loss of peace, beauty, and hope, realizing that pursuing progress without caring for the environment has destroyed the dream they once had.`,
         "biography": `Jade Margareth Bassiag is a first-year Economics student at the University of the Philippines, Los Baños. Growing up surrounded by nature, she developed a deep appreciation for its beauty and the importance of protecting it. This appreciation for beauty influences not only her outlook on life but also her artistic preferences. She is particularly drawn to works of art, such as music and films, that provide thoughtful critique and evoke deep emotions. Jade’s passion for art and nature also inspires her academic interests in Economics, where she hopes to explore solutions for environmental protection.`
     },
     "bayon": {
@@ -287,4 +287,94 @@ let url = new URL(window.location);
 let authorName = url.searchParams.get("name");
 if (authorName != null) {
     displayContent(authorName)
+}
+
+
+//MUSIC
+const playlist = [
+    "City Ruins (Rays of Light)",
+    "Shadowlords Castle (Memory)",
+    "Song of the Ancients (Devola)",
+    "Ashes of Dreams (Aratanaru)",
+    "Blissful Death",
+    "Faltering Prayer (Dawn Breeze)",
+    "Fortress of Lies",
+    "City Ruins (Shade)",
+    "Amusement Park",
+    "Kaine Salvation",
+    "Peaceful Sleep",
+    "Vague Hope (Cold Rain)",
+    "Faltering Prayer (Starry Sky)",
+    "Voice of no Return ",
+    "Repose"
+];
+let index = 0;
+let timeStamp = 0;
+let volume = 50;
+let presses = 0;
+const musicToggle = document.getElementById("music_toggle");
+let musicVolume = document.getElementById("music_volume");
+const backgroundMusic = document.getElementById("background_music");
+
+function playNext()
+{
+    console.log("ended")
+
+    backgroundMusic.src = "./assets/background_music/" + playlist[index].toLowerCase().replace(/\s+/g, "_") + ".mp3";
+    backgroundMusic.currentTime = timeStamp;
+    backgroundMusic.volume = 0.2 * (volume / 100);
+    backgroundMusic.play();
+    index = (index + 1) % playlist.length;
+
+    console.log(backgroundMusic.src);
+    console.log("music playing", index - 1);
+    console.log(index)
+}
+
+function playStop()
+{
+    timeStamp = backgroundMusic.currentTime;
+    backgroundMusic.pause();
+}
+
+musicVolume.addEventListener("input", () => {
+    volume = musicVolume.value;
+    backgroundMusic.volume = 0.2 * (volume / 100);
+});
+
+backgroundMusic.addEventListener("ended", playNext);
+musicToggle.addEventListener("change", (event) => {
+    if (musicToggle.checked) 
+    {
+
+        backgroundMusic.src = "./assets/background_music/" + playlist[index].toLowerCase().replace(/\s+/g, "_") + ".mp3";
+        backgroundMusic.currentTime = timeStamp;
+        backgroundMusic.volume = 0.2 * (volume / 100);
+        backgroundMusic.play();
+
+        if (presses < 1) index += 1;
+
+        presses += 1;
+        console.log(presses);
+    }
+    else 
+    {
+        if (presses == 1) index -= 1;
+        playStop();
+    }
+});
+
+const hrefs = document.querySelectorAll('a');
+
+hrefs.forEach(href => {
+  href.addEventListener('click', () => {
+    //const lastTime = parseFloat(localStorage.getItem("musicTime"));
+
+    localStorage.setItem("musicTime", timeStamp.toString());
+  });
+});
+
+if (document.referrer)
+{
+    timeStamp = parseFloat(localStorage.getItem("musicTime"));
 }

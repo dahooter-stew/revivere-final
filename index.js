@@ -74,8 +74,8 @@ const playlist = [
 ];
 let index = 0;
 let timeStamp = 0;
-let volume = 15;
-let entered = false;
+let volume = 50;
+let presses = 0;
 const musicToggle = document.getElementById("music_toggle");
 let musicVolume = document.getElementById("music_volume");
 const backgroundMusic = document.getElementById("background_music");
@@ -103,23 +103,45 @@ function playStop()
 
 musicVolume.addEventListener("input", () => {
     volume = musicVolume.value;
-   	backgroundMusic.volume = (volume / 100);
+   	backgroundMusic.volume = 0.2 * (volume / 100);
 });
 
 backgroundMusic.addEventListener("ended", playNext);
 musicToggle.addEventListener("change", (event) => {
 	if (musicToggle.checked) 
 	{
+
 		backgroundMusic.src = "./assets/background_music/" + playlist[index].toLowerCase().replace(/\s+/g, "_") + ".mp3";
 		backgroundMusic.currentTime = timeStamp;
 		backgroundMusic.volume = 0.2 * (volume / 100);
 		backgroundMusic.play();
 
-		if (!entered) index += 1;
-		entered = true;
+		if (presses < 1) index += 1;
+
+		presses += 1;
+		console.log(presses);
 	}
-	else playStop();
+	else 
+	{
+		if (presses == 1) index -= 1;
+		playStop();
+	}
 });
+
+const hrefs = document.querySelectorAll('a');
+
+hrefs.forEach(href => {
+  href.addEventListener('click', () => {
+  	//const lastTime = parseFloat(localStorage.getItem("musicTime"));
+
+    localStorage.setItem("musicTime", timeStamp.toString());
+  });
+});
+
+if (document.referrer)
+{
+	timeStamp = parseFloat(localStorage.getItem("musicTime"));
+}
 
 
 //COMMITTEES

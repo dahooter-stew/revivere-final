@@ -656,6 +656,10 @@ hr {
 	width: 90%
 }
 
+
+#output_content img {
+	margin-bottom: 20px;
+}
 #end {
 	text-align: center;
 	letter-spacing: 0.3rem;

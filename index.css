@@ -818,7 +818,7 @@ h4 {
 	justify-content: space-between;
 	gap: 1.5rem;
 
-	animation: scroll-left 100s linear infinite;
+	animation: scroll-left 400s linear infinite;
 }
 
 .marquee li {

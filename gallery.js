@@ -1,28 +1,3 @@
-//NAVBAR
-const stickyNav = document.getElementById('navbar');
-const mainHeader = document.getElementById('start');
-let lastScrollY = window.scrollY;
-
-const headerHeight = window.innerHeight;
-window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-    // Condition 1: Hide/Show logic
-    if (currentScrollY > headerHeight) {
-        // Only show/hide the sticky nav once we are past the main header
-        if (currentScrollY > lastScrollY && currentScrollY > headerHeight + 64) {
-            // Scrolling DOWN
-            stickyNav.classList.add('nav-hidden');
-        } else {
-            // Scrolling UP
-            stickyNav.classList.remove('nav-hidden');
-        }
-    } else {
-        // If we scroll back up into the main header area, keep the sticky nav hidden
-    }
-    lastScrollY = currentScrollY;
-});
-
-
 //MUSIC
 const playlist = [
     "City Ruins (Rays of Light)",
@@ -72,17 +47,10 @@ function playStop()
     backgroundMusic.pause();
 }
 
-musicVolume.addEventListener("input", () => {
-    volume = musicVolume.value;
-    backgroundMusic.volume = 0.2 * (volume / 100);
-});
-
 backgroundMusic.addEventListener("ended", playNext);
 musicToggle.addEventListener("change", (event) => {
     if (musicToggle.checked) 
     {
-        volumeContainer.classList.remove("hidden");
-
         backgroundMusic.src = "./assets/background_music/" + playlist[index].toLowerCase().replace(/\s+/g, "_") + ".mp3";
         backgroundMusic.currentTime = timeStamp;
         backgroundMusic.volume = 0.2 * (volume / 100);
@@ -101,19 +69,3 @@ musicToggle.addEventListener("change", (event) => {
         playStop();
     }
 });
-
-cconst hrefs = document.querySelectorAll('a');
-
-hrefs.forEach(href => {
-  href.addEventListener('click', () => {
-    localStorage.setItem("musicIndex", index.toString());
-    console.log((index - 1).toString());
-  });
-});
-
-const fromIndex = localStorage.getItem("musicIndex");
-if (!(fromIndex === "NaN"))
-{
-    index = parseInt(fromIndex)
-    console.log(fromIndex)
-}

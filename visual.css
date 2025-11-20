@@ -659,9 +659,6 @@ hr {
 
 
 @media (max-width: 768px) {
-	small {
-		display: none;
-	}
   :root {
     --section_height: auto;
     --section_width: 100%;
@@ -674,6 +671,10 @@ hr {
     letter-spacing: 0.05rem;
     font-size: 10px;
     scrollbar-gutter: stable; /* Reserves space for the scrollbar */
+  }
+
+  small {
+  	display: none;
   }
 
   /* -------- HEADER -------- */

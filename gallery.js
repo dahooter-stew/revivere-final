@@ -28,17 +28,11 @@ const backgroundMusic = document.getElementById("background_music");
 
 function playNext()
 {
-    console.log("ended")
-
     backgroundMusic.src = "./assets/background_music/" + playlist[index].toLowerCase().replace(/\s+/g, "_") + ".mp3";
     backgroundMusic.currentTime = timeStamp;
     backgroundMusic.volume = 0.2 * (volume / 100);
     backgroundMusic.play();
     index = (index + 1) % playlist.length;
-
-    console.log(backgroundMusic.src);
-    console.log("music playing", index - 1);
-    console.log(index)
 }
 
 function playStop()
@@ -59,7 +53,6 @@ musicToggle.addEventListener("change", (event) => {
         if (presses < 1) index += 1;
 
         presses += 1;
-        console.log(presses);
     }
     else 
     {

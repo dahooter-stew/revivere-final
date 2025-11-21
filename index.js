@@ -1,5 +1,3 @@
-
-
 //NAVBAR
 const stickyNav = document.getElementById('navbar');
 const mainHeader = document.getElementById('start');
@@ -28,22 +26,17 @@ window.addEventListener('scroll', () => {
 //SLIDESHOW
 const buttons = document.getElementsByClassName("slideshow_arrow");
 buttons[0].addEventListener("click", () => {
-	console.log("wow");
-
 	const slides = document.querySelector(".carousel>ul");
 	const activeSlide = slides.querySelector("[data-active]");
 	let newIndex = [...slides.children].indexOf(activeSlide) - 1;
 	newIndex %= slides.children.length;
 	if (newIndex < 0) newIndex += slides.children.length;
 
-	console.log(newIndex)
 
 	slides.children[newIndex].dataset.active = true;
 	delete activeSlide.dataset.active;
 });
 buttons[1].addEventListener("click", () => {
-	console.log("wow");
-
 	const slides = document.querySelector(".carousel>ul");
 	const activeSlide = slides.querySelector("[data-active]");
 	let newIndex = [...slides.children].indexOf(activeSlide) + 1;
@@ -85,7 +78,6 @@ const someToggle = document.getElementById("SOMETOGGLE");
 
 function playNext()
 {
-	console.log("ended")
 
 	backgroundMusic.src = "./assets/background_music/" + playlist[index].toLowerCase().replace(/\s+/g, "_") + ".mp3";
 	backgroundMusic.currentTime = timeStamp;
@@ -94,9 +86,6 @@ function playNext()
 	index = (index + 1) % playlist.length;
 	if (index > playlist.length) index = 0;
 
-	console.log(backgroundMusic.src);
-	console.log("music playing", index - 1);
-	console.log(index)
 }
 
 function playStop()
@@ -128,7 +117,6 @@ musicToggle.addEventListener("change", (event) => {
 		if (presses < 1) index += 1;
 
 		presses += 1;
-		console.log(presses);
 	}
 	else 
 	{
@@ -145,7 +133,6 @@ const hrefs = document.querySelectorAll('a');
 hrefs.forEach(href => {
   href.addEventListener('click', () => {
   	localStorage.setItem("musicIndex", index.toString());
-  	console.log((index - 1).toString());
   });
 });
 
@@ -153,7 +140,6 @@ const fromIndex = localStorage.getItem("musicIndex");
 if (!(fromIndex === "NaN"))
 {
 	index = parseInt(fromIndex)
-	console.log(fromIndex)
 }
 
 //COMMITTEES
@@ -417,7 +403,6 @@ const biographyText = document.getElementById("output_biography")
 
 function displayContent(name)
 {
-    console.log(name, outputs[name]);
     biographyContainer.classList.remove("hidden");
     biographyText.innerHTML = outputs[name].biography;
     biographyProfile.src = "./assets/profiles/" + name + ".jpg";

@@ -261,7 +261,6 @@ const biographyProfile = document.getElementById("biography_profile");
 
 function displayContent(name)
 {
-    console.log(name, outputs[name]);
     work.classList.remove("hidden");
     outputTitle.innerHTML = outputs[name].title;
     outputContent.innerHTML = outputs[name].output;
@@ -319,17 +318,12 @@ const backgroundMusic = document.getElementById("background_music");
 
 function playNext()
 {
-    console.log("ended")
-
     backgroundMusic.src = "./assets/background_music/" + playlist[index].toLowerCase().replace(/\s+/g, "_") + ".mp3";
     backgroundMusic.currentTime = timeStamp;
     backgroundMusic.volume = 0.2 * (volume / 100);
     backgroundMusic.play();
     index = (index + 1) % playlist.length;
 
-    console.log(backgroundMusic.src);
-    console.log("music playing", index - 1);
-    console.log(index)
 }
 
 function playStop()
@@ -357,7 +351,6 @@ musicToggle.addEventListener("change", (event) => {
         if (presses < 1) index += 1;
 
         presses += 1;
-        console.log(presses);
     }
     else 
     {
@@ -373,7 +366,6 @@ const hrefs = document.querySelectorAll('a');
 hrefs.forEach(href => {
   href.addEventListener('click', () => {
     localStorage.setItem("musicIndex", index.toString());
-    console.log((index - 1).toString());
   });
 });
 
@@ -381,5 +373,4 @@ const fromIndex = localStorage.getItem("musicIndex");
 if (!(fromIndex === "NaN"))
 {
     index = parseInt(fromIndex)
-    console.log(fromIndex)
 }
